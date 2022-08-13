@@ -14,3 +14,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*  a grid of 3 columns and a row of 2 rows */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
