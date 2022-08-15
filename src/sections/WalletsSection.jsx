@@ -12,7 +12,7 @@ export default function WalletsSection({ handleAction }) {
             <main>
                 Wallets
             </main>
-            <GridComponent target={"wallets"} data={wallets} handleAction={handleAction} />
+            {/* <GridComponent target={"wallets"} data={wallets} handleAction={handleAction} /> */}
 
         </Flex>
 

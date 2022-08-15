@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import FeaturesSection from "../sections/FeaturesSection";
 import HeroSection from "../sections/HeroSection";
 import PreferencesSection from "../sections/PreferencesSection";
@@ -13,16 +13,8 @@ export default function Home() {
   const [Open, setOpen] = useState();
   const router = useRouter();
 
-  const handleAction = (target) => {
-    if (target === "wallets") {
-      router.push("/walletDetails");
-    } else if (target === "users") {
-      router.push("/users/wallet");
-    } else if (target === "devs") {
-      router.push("/devs/walletDiscovery");
-    } else {
-      setOpen(true);
-    }
+  const handleAction = (type, resource) => {
+    type === "feature" ? setOpen(true) : router.push(`/${type}/${resource}`);
   };
 
   return (
