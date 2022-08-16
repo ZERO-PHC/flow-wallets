@@ -14,9 +14,15 @@ import { useDialog } from "../providers/DialogProvider";
 export default function Home() {
   const router = useRouter();
   const { setOpenSearch } =  useDialog()
+  const [WalletPreference, setWalletPreference] = useState(null);
 
   const handleAction = (type, resource) => {
     type === "feature" ? scrollToBottom() : router.push(`/${type}/${resource}`);
+  };
+  const handleSelection = (e, resource) => {
+    // stop propagation to prevent dialog from closing
+    e.stopPropagation();
+    resource === "custodial" ? setWalletPreference("custodial") : setWalletPreference("non-custodial");
   };
 
   const scrollToBottom = () => {
@@ -34,7 +40,7 @@ export default function Home() {
       <SearchDialogComponent handleAction={handleAction} />
       <DialogComponent handleAction={handleAction} />
       <HeroSection handleAction={handleAction} />
-      <PreferencesSection handleAction={handleAction} />
+      <PreferencesSection handleAction={handleAction} handleSelection={handleSelection} walletPref={WalletPreference} />
       <TableSection handleAction={handleAction}  />
     </>
   );
