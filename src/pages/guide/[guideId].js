@@ -6,14 +6,14 @@ import { useRouter } from "next/router";
 
 export default function Guide() {
   const router = useRouter();
-  const { guide } = router.query;
+  const { guideId } = router.query;
    
   return (
     <Wrapper>
-      <header>{guide} img </header>
+      <header>{guideId} img </header>
       <main>
         <section className="text">
-          <h1> {guide} guide</h1>
+          <h1> {guideId} guide</h1>
           {/* <Lorem /> */}
         </section>
         <section className="steps">
