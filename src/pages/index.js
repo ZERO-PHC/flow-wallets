@@ -4,6 +4,7 @@ import HeroSection from "../sections/HeroSection";
 import PreferencesSection from "../sections/PreferencesSection";
 import TableSection from "../sections/TableSection";
 import DialogComponent from "../components/DialogComponent";
+import Footer from "../components/Footer";
 import SearchDialogComponent from "../components/SearchDialogComponent";
 import { useRouter } from "next/router";
 import { useDialog } from "../providers/DialogProvider";
@@ -20,7 +21,6 @@ export default function Home() {
   const [Wallets, setWallets] = useState(wallets);
   
   useEffect(() => {
-    console.log("change")
     if(WalletPreference !== ""){
     setWallets(getPreffererdWallets())
     }
@@ -112,6 +112,8 @@ export default function Home() {
       <HeroSection handleAction={handleAction} />
       <PreferencesSection handleAction={handleAction} handleSelection={handleSelection} walletPref={WalletPreference} />
       <TableSection {...tableProps} />
+      <Footer />
+
     </>
   );
 }
