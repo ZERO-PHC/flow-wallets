@@ -19,7 +19,7 @@ export default function SearchDialogComponent({ handleAction }) {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setScroll(window.scrollY);
-      console.log("sy", window.scrollY)
+      // console.log("sy", window.scrollY)
     }), [scroll];
   });
 

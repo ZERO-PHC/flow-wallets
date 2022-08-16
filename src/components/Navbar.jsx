@@ -32,7 +32,7 @@ padding: 0rem 3rem;
 box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 background-color: #fff;
 width: 100%;
-height: 8vh;
+height: 10vh;
 align-items: center;
     margin: 0;
     display: flex;

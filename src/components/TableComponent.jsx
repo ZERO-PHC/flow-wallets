@@ -5,11 +5,11 @@ import { useDialog } from '../providers/DialogProvider';
 import { FeatureComponent } from './FeatureComponent';
 import { WalletComponent } from './WalletComponent';
 
-export default function TableComponent({ wallets, handleAction,  }) {
+export default function TableComponent({ Wallets, handleAction,  }) {
 
     return (<Wrapper >
         <main className='wallets-container'>
-            {wallets.map((wallet, i) => (<WalletComponent key={i} wallet={wallet} handleAction={handleAction} />))}
+            {Wallets.map((wallet, i) => (<WalletComponent key={i} wallet={wallet} handleAction={handleAction} />))}
         </main>
         <main className='features-container'>
             <header> FEATURES </header>

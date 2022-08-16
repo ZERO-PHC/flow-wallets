@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import FeaturesSection from "../sections/FeaturesSection";
 import HeroSection from "../sections/HeroSection";
 import PreferencesSection from "../sections/PreferencesSection";
@@ -7,6 +7,8 @@ import DialogComponent from "../components/DialogComponent";
 import SearchDialogComponent from "../components/SearchDialogComponent";
 import { useRouter } from "next/router";
 import { useDialog } from "../providers/DialogProvider";
+import { wallets } from '../data/wallets'
+import { categories } from '../data/categories'
 
 // picks up a nested color value using dot notation
 // => `theme.colors.gray[50]`
@@ -14,7 +16,60 @@ import { useDialog } from "../providers/DialogProvider";
 export default function Home() {
   const router = useRouter();
   const { setOpenSearch } =  useDialog()
-  const [WalletPreference, setWalletPreference] = useState(null);
+  const [WalletPreference, setWalletPreference] = useState("");
+  const [Wallets, setWallets] = useState(wallets);
+  
+  useEffect(() => {
+    console.log("change")
+    if(WalletPreference !== ""){
+    setWallets(getPreffererdWallets())
+    }
+  }, [WalletPreference])
+  
+
+  // const prefferedWallets = wallets.filter(wallet => WalletPreference === "custodial" ? wallet.custodial : !wallet.custodial)
+  // console.log("prefferedWallets", prefferedWallets)
+
+  const getPreffererdWallets = () => {
+      return  wallets.filter(wallet => WalletPreference === "custodial" ? wallet.custodial : !wallet.custodial)
+  }
+
+  const [tabIndex, setTabIndex] = useState(0)
+
+  const handleTabsChange = (index) => {
+      setTabIndex(index)
+      console.log("index", index)
+
+      switch (index) {
+          case 0:
+              setWallets(getPreffererdWallets())
+              break;
+          case 1:
+              setWallets(getSecurityWallets())
+              break;
+          case 2:
+              setWallets(getAnonWallets())
+              break;
+          case 3:
+              setWallets(getEaseWallets())
+              break;
+
+          default:
+              break;
+      }
+
+  }
+
+  const getSecurityWallets = () => {
+      return  prefferedWallets.filter(wallet => wallet.category === "security")
+  }
+  const getAnonWallets = () => {
+      return prefferedWallets.filter(wallet => wallet.category === 'anon')
+  }
+  const getEaseWallets = () => {
+      return prefferedWallets.filter(wallet => wallet.category === 'ease')
+  }
+
 
   const handleAction = (type, resource) => {
     type === "feature" ? scrollToBottom() : router.push(`/${type}/${resource}`);
@@ -35,13 +90,28 @@ export default function Home() {
     
   }
 
+  const tableProps = {
+        categories,
+        tabIndex,
+        setTabIndex,
+        handleAction,
+        handleTabsChange,
+        handleSelection,
+        categories,
+        tabIndex,
+        setTabIndex,
+        handleAction,
+        Wallets,
+        WalletPreference
+    }
+
   return (
     <>
       <SearchDialogComponent handleAction={handleAction} />
       <DialogComponent handleAction={handleAction} />
       <HeroSection handleAction={handleAction} />
       <PreferencesSection handleAction={handleAction} handleSelection={handleSelection} walletPref={WalletPreference} />
-      <TableSection handleAction={handleAction}  />
+      <TableSection {...tableProps} />
     </>
   );
 }
