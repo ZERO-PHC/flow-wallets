@@ -1,72 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // next router
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { WalletComponent } from "../../components/WalletComponent";
 import { wallets } from "../../data/wallets";
-import { Flex } from "@chakra-ui/react";
+import { Avatar, Flex } from "@chakra-ui/react";
+import { WalletPlatforms } from "../../components/WalletPlatforms";
 
-export default function Wallet() {
+export default function WalletView() {
   const router = useRouter();
   const { walletId } = router.query;
+  const [Wallet, setWallet] = useState(null);
 
-  const handleNav = (increment) => {
-    increment
-      ? router.push(`/wallet/${parseInt(walletId) + 1}`)
-      : router.push(`/wallet/${parseInt(walletId) - 1}`);
+  useEffect(() => {
+    walletId &&
+      setWallet({
+        ...wallets[walletId],
+      });
+  }, [walletId]);
+
+  console.log("Wallet", { ...wallets[walletId] });
+
+  const handleNav = (increment, url) => {
+    !increment
+      ? router.push(`/`)
+      : window.open(url, "_blank");
   };
 
-  const Lorem = () => {
+  const Lorem = ({ text }) => {
     // return a long string of -container
+    return <p>{text}</p>;
+  };
+
+  const SimilarWallets = ({ ids }) => {
+    // filter out the wallets that doesn't have the ids
+    const filteredWallets = wallets.filter((wallet) => ids.includes(wallet.id));
+    console.log("filteredWallets", filteredWallets);
+
     return (
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
-        nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget
-        consectetur nisi nisi eget consectetur consectetur, nisi nisi
-        consectetur nisi, eget consectetur nisi nisi eget consectetur
-        consectetur consectetur nisi, eget consectetur nisi nisi eget
-        consectetur consectetur, nisi nisi consectetur nisi, eget consectetur
-        nisi nisi eget consectetur consectetur
-      </p>
+        filteredWallets.map((wallet, i) => (
+          <div className="similar-container" key={i}>
+            <WalletComponent wallet={wallet} />
+          </div>
+        ))
     );
   };
 
-  const WalletPlatforms = () => {
-    // return an array of 4 icon components
-    return (
-      <Flex>
-        <Image
-          src={"/assets/wallets/platform-0.png"}
-          key="0"
-          height={30}
-          width={30}
-          alt="img"
-        />
-        <Image
-          src={"/assets/wallets/platform-1.png"}
-          key="0"
-          height={30}
-          width={30}
-          alt="img"
-        />
-        <Image
-          src={"/assets/wallets/platform-2.png"}
-          key="0"
-          height={30}
-          width={30}
-          alt="img"
-        />
-        <Image
-          src={"/assets/wallets/platform-3.png"}
-          key="0"
-          height={30}
-          width={30}
-          alt="img"
-        />
-      </Flex>
-    );
-  };
+  if (!Wallet) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Wrapper>
@@ -81,41 +64,35 @@ export default function Wallet() {
           />
         </section>
         <section className="wallet-branding">
-          <div className="name">Name</div>
-          <div className="logo">Logo</div>
+          <div className="logo">
+            <Avatar />
+          </div>
+          <div className="name">{Wallet.name}</div>
         </section>
-        <section className="wallet-specs">
-          <div className="spec">spec 1</div>
-          <div className="spec">spec 2</div>
-          <div className="spec">spec 3</div>
-        </section>
+      
         <section className="wallet-platforms">
-          <WalletPlatforms />
+          {<WalletPlatforms wallet={Wallet} />}
         </section>
       </header>
       <main>
         <section className="text-container">
-          <Lorem />
+          <Lorem text={Wallet.text} />
         </section>
         <section className="title">
           <h2>Similar Wallets</h2>
         </section>
-
         <section className="wallets-container">
-          <WalletComponent wallet={wallets[0]} />
-          <WalletComponent wallet={wallets[1]} />
+          <SimilarWallets ids={Wallet.similarWallets} />
         </section>
       </main>
       <footer>
         <section className="action">
-          <div onClick={() => handleNav(false)} className="nxt-btn">
-          </div>
-            <span>Compare wallets</span>
+          <div onClick={() => handleNav(false)} className="nxt-btn"></div>
+          <span>Compare wallets</span>
         </section>
         <section className="action">
-            <span>See website</span>
-          <div onClick={() => handleNav(true)} className="nxt-btn">
-          </div>
+          <span>See website</span>
+          <div onClick={() => handleNav(true, Wallet.url)} className="nxt-btn"></div>
         </section>
       </footer>
     </Wrapper>
@@ -151,6 +128,9 @@ const Wrapper = styled.main`
     align-items: center;
     height: 50%;
   }
+  .similar-container{
+    width: 50%;
+  } 
 
   .wallet-branding {
     display: flex;
@@ -169,7 +149,8 @@ const Wrapper = styled.main`
   }
 
   .title {
-    width: 80%;
+    font-size: 1.5rem;
+    width: 60%;
     text-align: left;
   }
   .wallet-platforms {
@@ -194,35 +175,31 @@ const Wrapper = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 60%;
   }
 
   .wallets-container {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
+    flex-direction: row;
+    width: 60%;
     border-radius: 10px;
+    min-height: 4rem;
+    padding:0.5rem; 1rem;
     background-color: lightgray;
   }
 
   .wallet-specs {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 10%;
     display: flex;
     padding: 2rem 0rem;
-    justify-content: space-evenly;
-    alignitems: center;
+    width: 10rem;
+    justify-content: space-between;
   }
 
   .spec {
     font-size: 1.6rem;
-    width: 33.3%;
-    -container-align: center;
   }
 
   .nxt-btn {

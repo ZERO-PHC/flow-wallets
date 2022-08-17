@@ -5,7 +5,7 @@ import { useDialog } from '../providers/DialogProvider';
 import { FeatureComponent } from './FeatureComponent';
 import { WalletComponent } from './WalletComponent';
 
-export default function TableComponent({ Wallets, handleAction,  }) {
+export default function TableComponent({ Wallets, handleAction, handleFeatureSelection  }) {
 
     return (<Wrapper >
         <main className='wallets-container'>
@@ -13,7 +13,7 @@ export default function TableComponent({ Wallets, handleAction,  }) {
         </main>
         <main className='features-container'>
             <header> FEATURES </header>
-            {features.map((feature, i) => <FeatureComponent key={i} feature={feature} handleAction={handleAction} dialog={true} />)}
+            {features.map((feature, i) => <FeatureComponent key={i} feature={feature} handleAction={handleAction} dialog={true} handleFeatureSelection={handleFeatureSelection} />)}
         </main>
     </Wrapper>
     )
@@ -33,6 +33,17 @@ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 .feature-container {
     padding: 1rem;
 }
+
+.wallet-specs {
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    display: flex;
+    padding: 2rem 0rem;
+    width: 10rem;
+    justify-content: space-between;
+  }
+
 
 .wallets-container {
     width: 80%;

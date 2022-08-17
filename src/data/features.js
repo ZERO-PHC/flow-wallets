@@ -1,5 +1,5 @@
 export const features = [
-  { id: 0, title: "Feature 1", selected: false, type: "feature" },
+  { id: "email-auth", title: "Feature 1", selected: false, type: "feature" },
   { id: 1, title: "Feature 2", selected: false, type: "feature" },
   { id: 2, title: "Feature 3", selected: false, type: "feature" },
   { id: 3, title: "Feature 4", selected: false, type: "feature" },

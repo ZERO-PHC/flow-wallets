@@ -8,112 +8,155 @@ import Footer from "../components/Footer";
 import SearchDialogComponent from "../components/SearchDialogComponent";
 import { useRouter } from "next/router";
 import { useDialog } from "../providers/DialogProvider";
-import { wallets } from '../data/wallets'
-import { categories } from '../data/categories'
+import { wallets } from "../data/wallets";
+import { categories } from "../data/categories";
 
-// picks up a nested color value using dot notation
-// => `theme.colors.gray[50]`
 
 export default function Home() {
   const router = useRouter();
-  const { setOpenSearch } =  useDialog()
+  const { setOpenSearch } = useDialog();
   const [WalletPreference, setWalletPreference] = useState("");
   const [Wallets, setWallets] = useState(wallets);
-  
-  useEffect(() => {
-    if(WalletPreference !== ""){
-    setWallets(getPreffererdWallets())
-    }
-  }, [WalletPreference])
-  
+  const [SelectedFeatures, setSelectedFeatures] = useState([]);
+  const [tabIndex, setTabIndex] = useState(0);
 
-  // const prefferedWallets = wallets.filter(wallet => WalletPreference === "custodial" ? wallet.custodial : !wallet.custodial)
-  // console.log("prefferedWallets", prefferedWallets)
+  useEffect(() => {
+    switch (tabIndex) {
+      case 0:
+        setWallets(WalletPreference !== "" ? getPreffererdWallets() : wallets);
+        break;
+      case 1:
+        setWallets(getSecurityWallets());
+        break;
+      case 2:
+        setWallets(getAnonWallets());
+        break;
+      case 3:
+        setWallets(getEaseWallets());
+        break;
+
+      default:
+        break;
+    }
+
+  }, [WalletPreference, SelectedFeatures, tabIndex]);
+
 
   const getPreffererdWallets = () => {
-      return  wallets.filter(wallet => WalletPreference === "custodial" ? wallet.custodial : !wallet.custodial)
-  }
-
-  const [tabIndex, setTabIndex] = useState(0)
+    // current wallets
+    return wallets.filter((wallet) =>
+      WalletPreference === "custodial" ? wallet.custodial : !wallet.custodial
+    );
+  };
 
   const handleTabsChange = (index) => {
-      setTabIndex(index)
-      console.log("index", index)
+    setTabIndex(index);
+    console.log("index", index);
+  };
 
-      switch (index) {
-          case 0:
-              setWallets(getPreffererdWallets())
-              break;
-          case 1:
-              setWallets(getSecurityWallets())
-              break;
-          case 2:
-              setWallets(getAnonWallets())
-              break;
-          case 3:
-              setWallets(getEaseWallets())
-              break;
+  function getFeatWallets(securityWallets) {
+    return securityWallets.filter((wallet) => {
+      return wallet.features.some((feature) =>
+        SelectedFeatures.includes(feature)
+      );
+    });
+  }
 
-          default:
-              break;
-      }
+  const getWallets = (isPreference, tab) => {
+    if (!isPreference) {
+      return wallets.filter((wallet) => wallet.category === tab);
+    } else {
 
+    return wallets.filter(
+      // TODO : abstract this logic to the resolveCustody function
+      (wallet) => WalletPreference === "custodial" ? wallet.category === tab && wallet.custodial : wallet.category === tab && !wallet.custodial
+    );
+    }
   }
 
   const getSecurityWallets = () => {
-      return  prefferedWallets.filter(wallet => wallet.category === "security")
-  }
-  const getAnonWallets = () => {
-      return prefferedWallets.filter(wallet => wallet.category === 'anon')
-  }
-  const getEaseWallets = () => {
-      return prefferedWallets.filter(wallet => wallet.category === 'ease')
-  }
+    const securityWallets = getWallets(WalletPreference !== "","security");
 
+    if (SelectedFeatures.length > 0) {
+        return getFeatWallets(securityWallets);
+    } else {
+        return  securityWallets;
+    }
+  };
+
+  const getAnonWallets = () => {
+    const anonWallets = getWallets(WalletPreference !== "",  "anon");
+
+    if (SelectedFeatures.length > 0) {
+        return getFeatWallets(anonWallets);
+    } else {
+        return  anonWallets;
+    }
+  };
+
+  const getEaseWallets = () => {
+    return prefferedWallets.filter((wallet) => wallet.category === "ease");
+  };
 
   const handleAction = (type, resource) => {
     type === "feature" ? scrollToBottom() : router.push(`/${type}/${resource}`);
   };
+
   const handleSelection = (e, resource) => {
     // stop propagation to prevent dialog from closing
     e.stopPropagation();
-    resource === "custodial" ? setWalletPreference("custodial") : setWalletPreference("non-custodial");
+    resource === "custodial"
+      ? setWalletPreference("custodial")
+      : setWalletPreference("non-custodial");
+  };
+
+  const handleFeatureSelection = (feature) => {
+    console.log("feature", feature);
+    if (SelectedFeatures.includes(feature)) {
+      // removes the feature from the selected features array
+      setSelectedFeatures(SelectedFeatures.filter((f) => f !== feature));
+    } else {
+      setSelectedFeatures([...SelectedFeatures, feature]);
+    }
   };
 
   const scrollToBottom = () => {
-    setOpenSearch(false)
+    setOpenSearch(false);
     // scroll to bottom of page
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
-    
-  }
+  };
 
   const tableProps = {
-        categories,
-        tabIndex,
-        setTabIndex,
-        handleAction,
-        handleTabsChange,
-        handleSelection,
-        categories,
-        tabIndex,
-        setTabIndex,
-        handleAction,
-        Wallets,
-        WalletPreference
-    }
+    categories,
+    tabIndex,
+    setTabIndex,
+    handleAction,
+    handleTabsChange,
+    handleSelection,
+    categories,
+    tabIndex,
+    setTabIndex,
+    handleAction,
+    Wallets,
+    WalletPreference,
+    handleFeatureSelection,
+  };
 
   return (
     <>
       <SearchDialogComponent handleAction={handleAction} />
       <DialogComponent handleAction={handleAction} />
       <HeroSection handleAction={handleAction} />
-      <PreferencesSection handleAction={handleAction} handleSelection={handleSelection} walletPref={WalletPreference} />
+      <PreferencesSection
+        handleAction={handleAction}
+        handleSelection={handleSelection}
+        walletPref={WalletPreference}
+      />
       <TableSection {...tableProps} />
       <Footer />
-
     </>
   );
 }
