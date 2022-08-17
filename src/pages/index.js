@@ -95,8 +95,16 @@ export default function Home() {
   };
 
   const getEaseWallets = () => {
-    return prefferedWallets.filter((wallet) => wallet.category === "ease");
+    const easeWallets = getWallets(WalletPreference !== "",  "ease");
+
+    if (SelectedFeatures.length > 0) {
+        return getFeatWallets(easeWallets);
+    } else {
+        return  easeWallets;
+    }
   };
+
+ 
 
   const handleAction = (type, resource) => {
     type === "feature" ? scrollToBottom() : router.push(`/${type}/${resource}`);
