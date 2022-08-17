@@ -11,7 +11,6 @@ import { useDialog } from "../providers/DialogProvider";
 import { wallets } from "../data/wallets";
 import { categories } from "../data/categories";
 
-
 export default function Home() {
   const router = useRouter();
   const { setOpenSearch } = useDialog();
@@ -38,9 +37,7 @@ export default function Home() {
       default:
         break;
     }
-
   }, [WalletPreference, SelectedFeatures, tabIndex]);
-
 
   const getPreffererdWallets = () => {
     // current wallets
@@ -62,49 +59,54 @@ export default function Home() {
     });
   }
 
+  const resolveCustodialPref = (wallet, tab) => {
+    switch (WalletPreference) {
+      case "custodial":
+       return  wallet.category === tab && wallet.custodial ?  true : false;
+      case "non-custodial":
+        return wallet.category === tab && !wallet.custodial ? true : false;
+      default:
+        return false;
+    }
+  };
+
   const getWallets = (isPreference, tab) => {
     if (!isPreference) {
-      return wallets.filter((wallet) => wallet.category === tab);
+      return wallets.filter(wallet => wallet.category === tab);
     } else {
-
-    return wallets.filter(
-      // TODO : abstract this logic to the resolveCustody function
-      (wallet) => WalletPreference === "custodial" ? wallet.category === tab && wallet.custodial : wallet.category === tab && !wallet.custodial
-    );
+      return wallets.filter(wallet => resolveCustodialPref(wallet, tab));
     }
-  }
+  };
 
   const getSecurityWallets = () => {
-    const securityWallets = getWallets(WalletPreference !== "","security");
+    const securityWallets = getWallets(WalletPreference !== "", "security");
 
     if (SelectedFeatures.length > 0) {
-        return getFeatWallets(securityWallets);
+      return getFeatWallets(securityWallets);
     } else {
-        return  securityWallets;
+      return securityWallets;
     }
   };
 
   const getAnonWallets = () => {
-    const anonWallets = getWallets(WalletPreference !== "",  "anon");
+    const anonWallets = getWallets(WalletPreference !== "", "anon");
 
     if (SelectedFeatures.length > 0) {
-        return getFeatWallets(anonWallets);
+      return getFeatWallets(anonWallets);
     } else {
-        return  anonWallets;
+      return anonWallets;
     }
   };
 
   const getEaseWallets = () => {
-    const easeWallets = getWallets(WalletPreference !== "",  "ease");
+    const easeWallets = getWallets(WalletPreference !== "", "ease");
 
     if (SelectedFeatures.length > 0) {
-        return getFeatWallets(easeWallets);
+      return getFeatWallets(easeWallets);
     } else {
-        return  easeWallets;
+      return easeWallets;
     }
   };
-
- 
 
   const handleAction = (type, resource) => {
     type === "feature" ? scrollToBottom() : router.push(`/${type}/${resource}`);
@@ -114,7 +116,7 @@ export default function Home() {
     // stop propagation to prevent dialog from closing
     e.stopPropagation();
     resource === "custodial"
-      ? setWalletPreference("custodial")
+      ? WalletPreference === "custodial" ? setWalletPreference("") : setWalletPreference("custodial")
       : setWalletPreference("non-custodial");
   };
 
