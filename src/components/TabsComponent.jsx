@@ -10,7 +10,7 @@ export default function TabsComponent() {
         <Box>
             <Tabs index={tabIndex} onChange={handleTabsChange}>
                 <TabList>
-                    {categories.map((category, index) => <Tab key={index}>{category.title}</Tab>)}
+                    {categories.map((category, index) => <Tab key={index}>{category.name}</Tab>)}
                 </TabList>
             </Tabs>
         </Box>

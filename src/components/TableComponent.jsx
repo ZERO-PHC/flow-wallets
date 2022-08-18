@@ -25,7 +25,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: row;
-width: 70%;
+width: 100%;
 height: 100%;
 background-color: #f5f5f5;
 border-radius: 10px;

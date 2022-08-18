@@ -19,7 +19,7 @@ export default function ElementComponent({ element, handleAction }) {
               <Icon />
             </div>
             <div>
-              <h1>{element.title}</h1>
+              <h1>{element.name}</h1>
               <small>{element.type}</small>
             </div>
 

@@ -28,5 +28,6 @@ a {
 
 footer {
   height: 10vh;
-  background-color: white;
+  background-color: black;
+  width: 100vw;
 }

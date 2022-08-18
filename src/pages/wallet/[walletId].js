@@ -78,7 +78,7 @@ export default function WalletView() {
         <section className="text-container">
           <Lorem text={Wallet.text} />
         </section>
-        <section className="title">
+        <section className="name">
           <h2>Similar Wallets</h2>
         </section>
         <section className="wallets-container">
@@ -148,7 +148,7 @@ const Wrapper = styled.main`
     width: 18%;
   }
 
-  .title {
+  .name {
     font-size: 1.5rem;
     width: 60%;
     text-align: left;

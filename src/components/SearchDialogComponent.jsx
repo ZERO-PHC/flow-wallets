@@ -30,7 +30,7 @@ export default function SearchDialogComponent({ handleAction }) {
   }
 
   const getMatchedElements = (value) => {
-    const matchedElements = elements.filter(element => element.title.toLowerCase().includes(value.toLowerCase()))
+    const matchedElements = elements.filter(element => element.name.toLowerCase().includes(value.toLowerCase()))
     setElements(matchedElements)
   }
 
