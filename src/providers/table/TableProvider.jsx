@@ -3,16 +3,14 @@ import { useRouter } from "next/router";
 import { useDialog } from "../DialogProvider";
 import { wallets } from "../../data/wallets";
 import { categories } from "../../data/categories";
-import { resolveWallets, handleFeatureSelection, handleTabsChange } from "../../utils/tableUtils";
-import { handleAction } from "../../utils/generalUtils";
-import { handleSelection } from "../../utils/preferencesUtils";
+import { resolveWallets } from "../../utils/tableUtils";
+// import { handleAction } from "../../utils/generalUtils";
+// import { handleSelection } from "../../utils/preferencesUtils";
 
 export const TableContext = createContext({});
 export const useTable = () => useContext(TableContext);
 
 export default function TableProvider({ children }) {
-  const router = useRouter();
-  const { setOpenSearch } = useDialog();
   const [WalletPreference, setWalletPreference] = useState("");
   const [Wallets, setWallets] = useState(wallets);
   const [SelectedFeatures, setSelectedFeatures] = useState([]);
@@ -27,15 +25,14 @@ export default function TableProvider({ children }) {
 
   const value = {
     categories,
-    handleAction,
-    handleTabsChange,
-    handleSelection,
+    // handleAction,
+    // handleTabsChange,
+    // handleSelection,
+    // handleFeatureSelection,
     Wallets,
     WalletPreference,
-    handleFeatureSelection,
     tabIndex,
     setTabIndex,
-    setOpenSearch,
     setWalletPreference,
     SelectedFeatures,
     setSelectedFeatures

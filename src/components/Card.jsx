@@ -3,11 +3,13 @@ import { Box, Button } from "@chakra-ui/react"
 import { useTable } from '../providers/table/TableProvider'
 // import next router from 'next/router'
 import { useRouter } from 'next/router'
+import { handleAction } from '../utils/generalUtils'
+import { handleSelection } from '../utils/preferencesUtils'
 
 // import brand theme from chakra-ui theme
 export default function Card({ type, resource }) {
   const router = useRouter()
-  const { handleAction, handleSelection, WalletPreference, setOpenSearch, setWalletPreference } = useTable()
+  const {  WalletPreference, setOpenSearch, setWalletPreference } = useTable()
 
   return (
     <>
