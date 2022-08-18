@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { features } from '../data/features';
 import { useDialog } from '../providers/DialogProvider';
+import { useTable } from '../providers/TableProvider';
 import { FeatureComponent } from './FeatureComponent';
 import { WalletComponent } from './WalletComponent';
 
-export default function TableComponent({ Wallets, handleAction, handleFeatureSelection  }) {
-
+export default function TableComponent() {
+    const { Wallets, handleAction, handleFeatureSelection  } = useTable()
     return (<Wrapper >
         <main className='wallets-container'>
             {Wallets.map((wallet, i) => (<WalletComponent key={i} wallet={wallet} handleAction={handleAction} />))}

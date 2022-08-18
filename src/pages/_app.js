@@ -5,6 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import Layout from "../components/Layout";
 import DialogProvider from "../providers/DialogProvider";
+import TableProvider from "../providers/TableProvider";
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
@@ -22,9 +23,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <DialogProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <TableProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </TableProvider>
       </DialogProvider>
     </ChakraProvider>
   );
