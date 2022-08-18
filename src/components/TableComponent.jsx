@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { features } from '../data/features';
 import { useDialog } from '../providers/DialogProvider';
-import { useTable } from '../providers/TableProvider';
+import { useTable } from '../providers/table/TableProvider';
 import { FeatureComponent } from './FeatureComponent';
 import { WalletComponent } from './WalletComponent';
 

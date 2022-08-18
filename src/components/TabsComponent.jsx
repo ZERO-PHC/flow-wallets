@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from '@chakra-ui/react'
-import { useTable } from '../providers/TableProvider';
+import { useTable } from '../providers/table/TableProvider';
 
 export default function TabsComponent() {
     const { categories, tabIndex, handleTabsChange, } = useTable();

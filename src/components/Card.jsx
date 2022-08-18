@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Button } from "@chakra-ui/react"
-import { useTable } from '../providers/TableProvider'
+import { useTable } from '../providers/table/TableProvider'
 
 // import brand theme from chakra-ui theme
 export default function Card({  type, resource }) {
