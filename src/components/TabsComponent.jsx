@@ -4,11 +4,11 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from '@chakra-ui/react'
 import { useTable } from '../providers/table/TableProvider';
 
 export default function TabsComponent() {
-    const { categories, tabIndex, handleTabsChange, } = useTable();
+    const { categories, tabIndex, handleTabsChange, setTabIndex } = useTable();
 
     return (<Wrapper>
         <Box>
-            <Tabs index={tabIndex} onChange={handleTabsChange}>
+            <Tabs index={tabIndex} onChange={(i) => handleTabsChange(i, setTabIndex)}>
                 <TabList>
                     {categories.map((category, index) => <Tab key={index}>{category.name}</Tab>)}
                 </TabList>

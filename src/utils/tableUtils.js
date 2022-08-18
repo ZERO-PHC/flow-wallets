@@ -1,13 +1,14 @@
-import { wallets } from "../../data/wallets";
+/////// Table Utils //////////
 
-///////// Table Utils //////////
+import { wallets } from "../data/wallets";
+
 
 export const resolveWallets = (WalletPreference, tab, SelectedFeatures) => {
   const tabName = resolveTabName(tab);
   const isPref = WalletPreference !== "";
   const walletsRes = getWallets(WalletPreference, tabName, isPref);
 
-  return SelectedFeatures.length > 0 ? getFeatWallets(walletsRes) : walletsRes;
+  return SelectedFeatures.length > 0 ? getFeatWallets(walletsRes, SelectedFeatures) : walletsRes;
 };
 
 const resolveTabName = (tab) => {
@@ -35,7 +36,7 @@ const getWallets = (walletPref, tab, isPref) => {
   }
 };
 
-const  getFeatWallets = (wallets) => {
+const  getFeatWallets = (wallets, SelectedFeatures) => {
   return wallets.filter((wallet) => {
     return wallet.features.some((feature) =>
       SelectedFeatures.includes(feature)
@@ -43,25 +44,25 @@ const  getFeatWallets = (wallets) => {
   });
 }
 
-const resolveCustodialPref = (walletPref, wallet) => {
+const resolveCustodialPref = (walletPref, wallet, tab) => {
   switch (walletPref) {
     case "custodial":
-      return isCustodial(wallet);
+      return isCustodial(wallet,tab);
     case "non-custodial":
-      return isNotCustodial(wallet);
+      return isNotCustodial(wallet,tab);
     default:
       return false;
   }
 };
 
-const isCustodial = (wallet) =>
+const isCustodial = (wallet,tab) =>
   wallet.categories.includes(tab) && wallet.custodial ? true : false;
 
-const isNotCustodial = () =>
+const isNotCustodial = (wallet,tab) =>
   wallet.categories.includes(tab) && !wallet.custodial ? true : false;
 
 
-export const handleFeatureSelection = (feature) => {
+export const handleFeatureSelection = (feature, SelectedFeatures, setSelectedFeatures) => {
     console.log("feature", feature);
     if (SelectedFeatures.includes(feature)) {
       // removes the feature from the selected features array
@@ -71,34 +72,6 @@ export const handleFeatureSelection = (feature) => {
     }
   };  
 
-/////// General Utils ///////
-
-export const handleAction = (type, resource) => {
-  type === "feature" ? scrollToBottom() : router.push(`/${type}/${resource}`);
-};
-
-const scrollToBottom = () => {
-    setOpenSearch(false);
-    // scroll to bottom of page
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth",
-    });
+ export const handleTabsChange = (index, setTabIndex) => {
+    setTabIndex(index);
   };
-  
-
-/////////// Preferences Utils //////////////
-
-export const handleSelection = (e, resource, walletPref, setWalletPreference) => {
-  // stop propagation to prevent dialog from closing
-  e.stopPropagation();
-  resource === "custodial"
-    ? walletPref === "custodial"
-      ? setWalletPreference("")
-      : setWalletPreference("custodial")
-    : walletPref === "non-custodial"
-    ? setWalletPreference("")
-    : setWalletPreference("non-custodial");
-};
-
-

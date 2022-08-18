@@ -7,14 +7,14 @@ import { FeatureComponent } from './FeatureComponent';
 import { WalletComponent } from './WalletComponent';
 
 export default function TableComponent() {
-    const { Wallets, handleAction, handleFeatureSelection  } = useTable()
+    const { Wallets, handleAction, handleFeatureSelection, SelectedFeatures, setSelectedFeatures  } = useTable()
     return (<Wrapper >
         <main className='wallets-container'>
             {Wallets.map((wallet, i) => (<WalletComponent key={i} wallet={wallet} handleAction={handleAction} />))}
         </main>
         <main className='features-container'>
             <header> FEATURES </header>
-            {features.map((feature, i) => <FeatureComponent key={i} feature={feature} handleAction={handleAction} dialog={true} handleFeatureSelection={handleFeatureSelection} />)}
+            {features.map((feature, i) => <FeatureComponent key={i} feature={feature} handleAction={handleAction} dialog={true} handleFeatureSelection={(feature) => handleFeatureSelection(feature, SelectedFeatures, setSelectedFeatures)} />)}
         </main>
     </Wrapper>
     )
