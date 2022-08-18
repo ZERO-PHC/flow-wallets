@@ -7,6 +7,7 @@ import { WalletComponent } from "../../components/WalletComponent";
 import { wallets } from "../../data/wallets";
 import { Avatar, Flex } from "@chakra-ui/react";
 import { WalletPlatforms } from "../../components/WalletPlatforms";
+import WalletSpecs from "../../components/WalletSpecs";
 
 export default function WalletView() {
   const router = useRouter();
@@ -69,6 +70,7 @@ export default function WalletView() {
           </div>
           <div className="name">{Wallet.name}</div>
         </section>
+        <WalletSpecs wallet={Wallet} />
       
         <section className="wallet-platforms">
           {<WalletPlatforms wallet={Wallet} />}

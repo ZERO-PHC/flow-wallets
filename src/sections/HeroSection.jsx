@@ -7,10 +7,10 @@ export default function HeroSection() {
         <main style={{ position: "relative", height: "90vh", width: "100%" }}>
             <Skeleton height="90vh" />
             <section style={{ position: "absolute", bottom: -60, left: "60%" }}>
-                <Card type="guide" resource="wallet" > users </Card>
+                <Card type="guide" resource={0} > users </Card>
             </section>
             <section style={{ position: "absolute", bottom: -60, left: "20%" }}>
-                <Card type="guide" resource="wallet-discovery" > users </Card>
+                <Card type="guide" resource={1} > users </Card>
             </section>
         </main>
     )
