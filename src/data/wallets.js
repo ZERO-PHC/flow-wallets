@@ -4,7 +4,7 @@ export const wallets = [
     name: "Dapper",
     selected: false,
     type: "wallet",
-    category: "ease",
+    categories:[ "ease","all"],
     custodial: true,
     similarWallets: [2, 3],
     specs: {
@@ -17,7 +17,7 @@ export const wallets = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
     url: "https://starlink.com",
     features: [
-      "email-auth"
+      "fiat-token"
     ]
   },
   {
@@ -25,7 +25,7 @@ export const wallets = [
     name: "Lilico",
     selected: false,
     type: "wallet",
-    category: "security",
+    categories:[ "security","all"],
     custodial: false,
     similarWallets: [1, 3],
     specs: {
@@ -38,7 +38,7 @@ export const wallets = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
     url: "https://starlink.com",
     features: [
-      "email-auth"
+      "nft-support"
     ]
   },
   {
@@ -46,7 +46,7 @@ export const wallets = [
     name: "Blocto",
     selected: false,
     type: "wallet",
-    category: "ease",
+    categories:[ "ease","all"],
     custodial: true,
     similarWallets: [0, 4],
     specs: {
@@ -68,7 +68,7 @@ export const wallets = [
     name: "Ledger",
     selected: false,
     type: "wallet",
-    category: "security",
+    categories:[ "security","all"],
     custodial: false,
     similarWallets: [1, 2],
     specs: {
@@ -89,7 +89,7 @@ export const wallets = [
     name: "Finoa",
     selected: false,
     type: "wallet",
-    category: "anon",
+    categories:[ "anon","all"],
     custodial: true,
     similarWallets: [0, 3],
     specs: {

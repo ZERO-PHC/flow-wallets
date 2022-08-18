@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     switch (tabIndex) {
       case 0:
-        setWallets(WalletPreference !== "" ? getPreffererdWallets() : wallets);
+        setWallets(getAllWallets());
         break;
       case 1:
         setWallets(getSecurityWallets());
@@ -39,20 +39,14 @@ export default function Home() {
     }
   }, [WalletPreference, SelectedFeatures, tabIndex]);
 
-  const getPreffererdWallets = () => {
-    // current wallets
-    return wallets.filter((wallet) =>
-      WalletPreference === "custodial" ? wallet.custodial : !wallet.custodial
-    );
-  };
 
   const handleTabsChange = (index) => {
     setTabIndex(index);
     console.log("index", index);
   };
 
-  function getFeatWallets(securityWallets) {
-    return securityWallets.filter((wallet) => {
+  function getFeatWallets(wallets) {
+    return wallets.filter((wallet) => {
       return wallet.features.some((feature) =>
         SelectedFeatures.includes(feature)
       );
@@ -62,9 +56,9 @@ export default function Home() {
   const resolveCustodialPref = (wallet, tab) => {
     switch (WalletPreference) {
       case "custodial":
-       return  wallet.category === tab && wallet.custodial ?  true : false;
+        return wallet.categories.includes(tab) && wallet.custodial ? true : false;
       case "non-custodial":
-        return wallet.category === tab && !wallet.custodial ? true : false;
+        return wallet.categories.includes(tab) && !wallet.custodial ? true : false;
       default:
         return false;
     }
@@ -72,11 +66,22 @@ export default function Home() {
 
   const getWallets = (isPreference, tab) => {
     if (!isPreference) {
-      return wallets.filter(wallet => wallet.category === tab);
+      return wallets.filter((wallet) => wallet.categories.includes(tab));
     } else {
-      return wallets.filter(wallet => resolveCustodialPref(wallet, tab));
+      return wallets.filter((wallet) => resolveCustodialPref(wallet, tab));
     }
   };
+
+
+  const getAllWallets = () => {
+    const allWallets = getWallets(WalletPreference !== "", "all");
+
+    if (SelectedFeatures.length > 0) {
+      return getFeatWallets(allWallets);
+    } else {
+      return allWallets;
+    }  };
+
 
   const getSecurityWallets = () => {
     const securityWallets = getWallets(WalletPreference !== "", "security");
@@ -116,7 +121,11 @@ export default function Home() {
     // stop propagation to prevent dialog from closing
     e.stopPropagation();
     resource === "custodial"
-      ? WalletPreference === "custodial" ? setWalletPreference("") : setWalletPreference("custodial")
+      ? WalletPreference === "custodial"
+        ? setWalletPreference("")
+        : setWalletPreference("custodial")
+      : WalletPreference === "non-custodial"
+      ? setWalletPreference("")
       : setWalletPreference("non-custodial");
   };
 
@@ -146,7 +155,6 @@ export default function Home() {
     handleAction,
     handleTabsChange,
     handleSelection,
-    categories,
     tabIndex,
     setTabIndex,
     handleAction,
