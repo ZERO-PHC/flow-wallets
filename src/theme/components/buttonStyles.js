@@ -45,6 +45,13 @@ export const ButtonStyles = {
         _hover: {
             transform: "scale(1.02)",
         },
+    }),
+    semiBold: (props) => ({
+        fontFamily: "Blinker SemiBold",
+        fontSize: "14px",
+    }),
+    simpleBtn: (props) => ({
+        color: mode("green.100", "purple.100")(props),
     })
   },
 

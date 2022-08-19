@@ -12,7 +12,7 @@ export const wallets = [
       anonymity: "Low",
       usability: "High",
     },
-    platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
+    platforms: ["web"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
     url: "https://starlink.com",
@@ -54,7 +54,7 @@ export const wallets = [
       anonymity: "High",
       usability: "High",
     },
-    platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
+    platforms: ["web", "playstore", "appstore"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
       url: "https://starlink.com",

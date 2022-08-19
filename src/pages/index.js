@@ -5,7 +5,7 @@ import TableSection from "../sections/TableSection";
 import DialogComponent from "../components/DialogComponent";
 import Footer from "../components/Footer";
 import SearchDialogComponent from "../components/SearchDialogComponent";
-
+import { Flex } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -13,12 +13,11 @@ export default function Home() {
       <SearchDialogComponent />
       <DialogComponent />
       <HeroSection />
-      <Flex flexDir={'column'} p={"0 15%"}>
-         <PreferencesSection />
-      <TableSection />
+      <Flex flexDir={"column"} p={"0 15%"}>
+        <PreferencesSection />
+        <TableSection />
       </Flex>
       <Footer />
     </>
   );
 }
-
