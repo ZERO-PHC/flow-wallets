@@ -5,6 +5,8 @@ import PreferencesSection from "../sections/PreferencesSection";
 import WalletsSection from "../sections/WalletsSection";
 import DialogComponent from "../components/DialogComponent";
 import { useRouter } from "next/router";
+import PreferenceCard from "../components/PreferenceCard";
+import { Flex } from "@chakra-ui/react";
 
 // picks up a nested color value using dot notation
 // => `theme.colors.gray[50]`
@@ -29,9 +31,11 @@ export default function Home() {
     <>
       <DialogComponent open={Open} setOpen={setOpen} />
       <HeroSection handleAction={handleAction} />
+      <Flex flexDir={'column'} p={"0 15%"}>
       <PreferencesSection handleAction={handleAction} />
       <FeaturesSection handleAction={handleAction} />
       <WalletsSection handleAction={handleAction} />
+      </Flex>
     </>
   );
 }

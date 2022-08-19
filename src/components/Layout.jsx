@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from './Navbar'
+import { Flex } from '@chakra-ui/react'
 
 export default function Layout({ children }) {
     return (
         <div>
             <Navbar />
-            <main>{children}</main>
+            <Flex flexDir="column">{children}</Flex>
         </div>
     )
 }
