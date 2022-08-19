@@ -9,8 +9,8 @@ import { handleSelection } from '../utils/preferencesUtils'
 
 export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageItem2, AdvantageItem3, DisadvantageItem1, DisadvantageItem2, DisadvantageItem3 }) {
   const router = useRouter()
-  const {  WalletPreference, setOpenSearch, setWalletPreference } = useTable()
-  
+  const { WalletPreference, setOpenSearch, setWalletPreference } = useTable()
+
   return (
     <Container
       // onClick={() => handleAction(target)}
@@ -18,7 +18,7 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
     >
       <Flex justify={"center"} w={"100%"}>
         <Heading variant="primary"> {title} </Heading>
-        <Checkbox isChecked={WalletPreference === id}  marginLeft="auto" onChange={(e) => handleSelection(e, id, WalletPreference, setWalletPreference)}/>
+        <Checkbox isChecked={WalletPreference === id} marginLeft="auto" onChange={(e) => handleSelection(e, id, WalletPreference, setWalletPreference)} />
       </Flex>
       <Flex justifyContent={'space-evenly'} gap="50px">
         <Flex flexDir={'column'}>
@@ -38,7 +38,8 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
           </chakra.ul>
         </Flex>
       </Flex>
-      <Button variant="bottomLine">Learn More</Button>
+      <Button onClick={() => handleAction("guide", id === "custodial" ? 3 : 4, router)}
+        variant="bottomLine">Learn More</Button>
     </Container>
   );
 }
