@@ -1,15 +1,18 @@
 import React from 'react'
-import { Flex, Grid } from "@chakra-ui/react"
+import { Flex, Grid, Heading } from "@chakra-ui/react"
 import Card from '../components/Card'
+import PreferenceCard from '../components/PreferenceCard'
 
 export default function PreferencesSection() {
     return (
-        <Flex flexDirection={"column"} width="100%">
-            <h2>Choose your Wallet Preferences</h2>
-            <Flex w={"100%"} h="40vh" align="center" justify="space-around">
-                    <Card type="guide" resource={0} />
-                    <Card type="guide" resource={1} />
-            </Flex>
+        <Flex w={"100%"} h="60vh" align="center" justify="center" flexDir={'column'}>
+            <Heading mb={8} mr={"auto"}>Choose your wallet preferences</Heading>
+            <Grid gap={20} autoFlow="column dense">
+                <PreferenceCard  id="non-custodial" title="Non-Custodial"/>
+                <PreferenceCard id="custodial" title="Custodial"/>
+                {/* <Card handleAction={handleAction} target="users" />
+                <Card handleAction={handleAction} target="devs" /> */}
+            </Grid>
         </Flex>
 
     )

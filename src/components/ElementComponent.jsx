@@ -6,15 +6,17 @@ import { Icon, IconButton } from '@chakra-ui/react';
 import { handleAction } from '../utils/generalUtils';
 import { useRouter } from "next/router";
 import { useDialog } from '../providers/DialogProvider';
+import { useTable } from '../providers/table/TableProvider';
 
 export default function ElementComponent({ element }) {
   const router = useRouter();
   const { setOpenSearch } = useDialog()
+  const { setSelectedFeatures, SelectedFeatures } = useTable()
 
   return (
     <Wrapper>
 
-      <main className='element-search-container' onClick={() => handleAction(element.type, element.id, router, setOpenSearch)}>
+      <main className='element-search-container' onClick={() => handleAction(element.type, element.id, router, setOpenSearch, setSelectedFeatures,  SelectedFeatures)}>
         <section className='element-search'>
 
           <main style={{ display: "flex", height: "100%", alignItems: "center", width: "16%", justifyContent: "space-around" }}>

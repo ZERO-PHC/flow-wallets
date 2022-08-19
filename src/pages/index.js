@@ -6,36 +6,21 @@ import TableSection from "../sections/TableSection";
 import DialogComponent from "../components/DialogComponent";
 import Footer from "../components/Footer";
 import SearchDialogComponent from "../components/SearchDialogComponent";
-import styled from "styled-components";
+import { Flex } from "@chakra-ui/react";
 
 
 export default function Home() {
   return (
-    <Wrapper>
+    <>
       <SearchDialogComponent />
       <DialogComponent />
       <HeroSection />
-      <section className="main-content">
+      <Flex flexDir={'column'} p={"0 15%"}>
          <PreferencesSection />
       <TableSection />
-      </section>
-     
+      </Flex>
       <Footer />
-    </Wrapper>
+    </>
   );
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  .main-content {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    
-  }
-
-  `;

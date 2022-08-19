@@ -25,7 +25,7 @@ export default function WalletView() {
 
   const handleNav = (increment, url) => {
     !increment
-      ? router.push(`/`)
+      ? router.back()
       : window.open(url, "_blank");
   };
 

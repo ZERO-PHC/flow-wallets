@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import { features } from '../data/features';
 import { useDialog } from '../providers/DialogProvider';
 import { useTable } from '../providers/table/TableProvider';
+import { handleAction } from '../utils/generalUtils';
+import { handleFeatureSelection } from '../utils/tableUtils';
 import { FeatureComponent } from './FeatureComponent';
 import { WalletComponent } from './WalletComponent';
 
 export default function TableComponent() {
-    const { Wallets, handleAction, handleFeatureSelection, SelectedFeatures, setSelectedFeatures  } = useTable()
+    const { Wallets, SelectedFeatures, setSelectedFeatures  } = useTable()
     return (<Wrapper >
         <main className='wallets-container'>
             {Wallets.map((wallet, i) => (<WalletComponent key={i} wallet={wallet} handleAction={handleAction} />))}

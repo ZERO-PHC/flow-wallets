@@ -7,8 +7,6 @@ import { features } from '../data/features'
 
 export default function FeaturesSection({ handleAction }) {
 
-   
-
     return (
         <Flex direction={"column"} w={"100%"} h="50%" align="center" justify="center">
             <main>

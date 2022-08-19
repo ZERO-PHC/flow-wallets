@@ -1,12 +1,16 @@
-export const handleSelection = (e, resource, walletPref, setWalletPreference) => {
+export const handleSelection = (e, id, walletPref, setWalletPreference) => {
     // stop propagation to prevent dialog from closing
     e.stopPropagation();
-    resource === "custodial"
-      ? walletPref === "custodial"
-        ? setWalletPreference("")
-        : setWalletPreference("custodial")
-      : walletPref === "non-custodial"
-      ? setWalletPreference("")
-      : setWalletPreference("non-custodial");
+    const prefRes = resolveWalletPref(id, walletPref);
+
+    setWalletPreference(prefRes);
+   
+  };
+
+  export const resolveWalletPref = (id, walletPref) => {
+
+    walletPref === id ? walletPref = '' : walletPref = id;
+     
+    return walletPref;
   };
   
