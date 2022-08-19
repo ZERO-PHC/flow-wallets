@@ -10,9 +10,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <DialogProvider>
+        <TableProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </TableProvider>
+      </DialogProvider>
     </ChakraProvider>
   );
 }

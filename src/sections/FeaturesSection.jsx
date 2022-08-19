@@ -12,7 +12,7 @@ export default function FeaturesSection({ handleAction }) {
             <main>
                 tabs
             </main>
-            <GridComponent data={features} handleAction={handleAction}  />
+            <GridComponent data={features} handleAction={handleAction} type={"feature"}  />
         <PrimaryButton />
         </Flex>
 

@@ -28,8 +28,11 @@ const Navbar = () => {
 export default Navbar;
 
 const Nav = styled.nav`
+position: fixed;
+z-index: 99;
 display: flex;
 justify-content: space-between;
+padding: 0rem 3rem;  
 box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     width: 100%;
     height: 8vh;
