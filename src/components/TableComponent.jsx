@@ -1,3 +1,4 @@
+import { Container, Heading } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { features } from '../data/features';
@@ -10,14 +11,17 @@ import { WalletComponent } from './WalletComponent';
 
 export default function TableComponent() {
     const { Wallets, SelectedFeatures, setSelectedFeatures  } = useTable()
-    return (<Wrapper >
-        <main className='wallets-container'>
+    return (
+    <Wrapper>
+        <Container p={0} boxShadow={0} >
+            <Container p={2} borderRadius={"10px 0 0 10px"} boxShadow={0} justify="flex-start">
             {Wallets.map((wallet, i) => (<WalletComponent key={i} wallet={wallet} handleAction={handleAction} />))}
-        </main>
-        <main className='features-container'>
-            <header> FEATURES </header>
+            </Container>
+        </Container>
+        <Container w={"20%"} boxShadow={0} borderRadius={0} p={"0 20px"} border="1px solid black" variant="tableFeatures">
+            <Heading fontSize={"20px"} textAlign="center" fontFamily={"Blinker Bold"}> FEATURES </Heading>
             {features.map((feature, i) => <FeatureComponent key={i} feature={feature} handleAction={handleAction} dialog={true} handleFeatureSelection={(feature) => handleFeatureSelection(feature, SelectedFeatures, setSelectedFeatures)} />)}
-        </main>
+        </Container>
     </Wrapper>
     )
 }
@@ -31,7 +35,7 @@ width: 100%;
 height: 100%;
 background-color: #f5f5f5;
 border-radius: 10px;
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
 .feature-container {
     padding: 1rem;
@@ -52,6 +56,7 @@ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     height: 100%;
     border-right: 1px solid #e0e0e0;
+    border-radius: 10px;
 }
 
 .wallet-container {
@@ -76,4 +81,5 @@ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 .features-container {
     width: 20%;
     height: 100%;
+}
 `

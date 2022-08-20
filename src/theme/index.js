@@ -45,7 +45,7 @@ const customTheme = {
     },
     green: {
       100: "#00EF8B",
-      200: "#8703EF",
+      200: "#16FF99",
     },
     white: {
       100: "#FFFDFD",
@@ -87,6 +87,9 @@ const customTheme = {
         flexDirection: "column",
         borderRadius: 6,
         boxShadow: "0px 10px 20px 4px rgba(0, 0, 0, 0.1)",
+        maxWidth: "none",
+        w: "100%",
+        h: "100%"
       }),
       variants: {
         preferenceCard: (props) => ({
@@ -94,8 +97,30 @@ const customTheme = {
           height: "270px",
           padding: "20px 40px",
         }),
+        overview: (props) => ({
+            bg: mode("black.200", "gray.600")(props),
+            color: mode("white", "white")(props),
+            fontFamily: "Blinker SemiBold",
+        }),
+        tableFeatures: (props) => ({
+            bg: mode("white", "gray.500")(props),
+        })
       },
     },
+    Tabs: {
+        baseStyle: (props) => ({
+            _selected: {
+                color: mode("purple.100", "purple.100")(props),
+            },
+            tab: {
+                fontFamily: "Blinker Bold",
+                _selected: {
+                    bg: mode("#8703EF1A", "#8703EF1A")(props),
+                    color: mode("white.100", "purple.100")(props),
+                },
+            }
+        }),
+    }
   },
 };
 

@@ -15,7 +15,7 @@ const Navbar = () => {
       <Logo />
      
       <SearchSection>
-        <InputSearch placeholder={'Search'} size={'md'}/>
+        <InputSearch  placeholder={'Search'} size={'md'}/>
       </SearchSection>
 
       <ToggleColorMode />

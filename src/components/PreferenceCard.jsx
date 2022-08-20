@@ -1,11 +1,11 @@
 import React from "react";
 import { Flex, Button, Heading, Container, chakra } from "@chakra-ui/react";
-import { Checkbox } from "@chakra-ui/react";
 import { useTable } from '../providers/table/TableProvider'
-// import next router from 'next/router'
 import { useRouter } from 'next/router'
 import { handleAction } from '../utils/generalUtils'
 import { handleSelection } from '../utils/preferencesUtils'
+import { Checkbox } from "@chakra-ui/react"
+
 
 export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageItem2, AdvantageItem3, DisadvantageItem1, DisadvantageItem2, DisadvantageItem3 }) {
   const router = useRouter()
