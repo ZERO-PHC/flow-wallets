@@ -5,9 +5,13 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { WalletComponent } from "../../components/WalletComponent";
 import { wallets } from "../../data/wallets";
-import { Avatar, Flex } from "@chakra-ui/react";
+import { Avatar, Container, Flex, Heading, Divider } from "@chakra-ui/react";
 import { WalletPlatforms } from "../../components/WalletPlatforms";
 import WalletSpecs from "../../components/WalletSpecs";
+import WalletPlatformsIcons from "../../components/WalletPlatformsIcons";
+import SpecsBulletsView from "../../components/SpecsBulletsView";
+import WalletsBulletsRank from "../../sections/WalletsBulletsRank";
+import SimilarWalletsSection from "../../sections/SimilarWalletsSection";
 
 export default function WalletView() {
   const router = useRouter();
@@ -24,9 +28,7 @@ export default function WalletView() {
   console.log("Wallet", { ...wallets[walletId] });
 
   const handleNav = (increment, url) => {
-    !increment
-      ? router.back()
-      : window.open(url, "_blank");
+    !increment ? router.back() : window.open(url, "_blank");
   };
 
   const Lorem = ({ text }) => {
@@ -39,13 +41,11 @@ export default function WalletView() {
     const filteredWallets = wallets.filter((wallet) => ids.includes(wallet.id));
     console.log("filteredWallets", filteredWallets);
 
-    return (
-        filteredWallets.map((wallet, i) => (
-          <div className="similar-container" key={i}>
-            <WalletComponent wallet={wallet} />
-          </div>
-        ))
-    );
+    return filteredWallets.map((wallet, i) => (
+      <div className="similar-container" key={i}>
+        <WalletComponent wallet={wallet} />
+      </div>
+    ));
   };
 
   if (!Wallet) {
@@ -54,49 +54,38 @@ export default function WalletView() {
 
   return (
     <Wrapper>
-      <header>
-        <section
-          style={{ height: "10rem", width: "10rem", position: "relative" }}
+      <Container variant="walletPage" justifyContent={"flex-start"} h="auto">
+        <Container
+          h="auto"
+          p="110px 15% 0"
+          alignItems="center"
+          boxShadow={0}
+          variant="lilicoBg"
         >
-          <Image
-            src={`/assets/wallets/wallet-${walletId}.png`}
-            layout="fill"
-            alt="illustration"
-          />
-        </section>
-        <section className="wallet-branding">
-          <div className="logo">
-            <Avatar />
-          </div>
-          <div className="name">{Wallet.name}</div>
-        </section>
-        <WalletSpecs wallet={Wallet} />
-      
-        <section className="wallet-platforms">
-          {<WalletPlatforms wallet={Wallet} />}
-        </section>
-      </header>
-      <main>
-        <section className="text-container">
+          <Flex w="100%" justifyContent="space-between">
+            <Flex alignItems={"center"} gap={3}>
+              <Avatar />
+              <Heading>{Wallet.name}</Heading>
+            </Flex>
+            <WalletPlatformsIcons platforms={Wallet.platforms} size={30} />
+          </Flex>
+          <Flex>
+            <Image
+              src={`/assets/wallets/wallet-${walletId}.png`}
+              layout="fixed"
+              width={300}
+              height={300}
+              alt="illustration"
+            />
+          </Flex>
+        </Container>
+        <WalletsBulletsRank specs={Wallet.specs} />
+        <Flex p={"3% 15%"} flexDir="column" gap={12}>
           <Lorem text={Wallet.text} />
-        </section>
-        <section className="name">
-          <h2>Similar Wallets</h2>
-        </section>
-        <section className="wallets-container">
-          <SimilarWallets ids={Wallet.similarWallets} />
-        </section>
-      </main>
-      <footer>
-        <section className="action">
-          <div onClick={() => handleNav(false)} className="nxt-btn"></div>
-          <span>Compare wallets</span>
-        </section>
-        <section className="action">
-          <span>See website</span>
-          <div onClick={() => handleNav(true, Wallet.url)} className="nxt-btn"></div>
-        </section>
-      </footer>
+          <SimilarWalletsSection />
+        </Flex>
+      </Container>
+      
     </Wrapper>
   );
 }
@@ -130,9 +119,9 @@ const Wrapper = styled.main`
     align-items: center;
     height: 50%;
   }
-  .similar-container{
+  .similar-container {
     width: 50%;
-  } 
+  }
 
   .wallet-branding {
     display: flex;
@@ -186,7 +175,7 @@ const Wrapper = styled.main`
     width: 60%;
     border-radius: 10px;
     min-height: 4rem;
-    padding:0.5rem; 1rem;
+    padding: 0.5rem 1rem;
     background-color: lightgray;
   }
 

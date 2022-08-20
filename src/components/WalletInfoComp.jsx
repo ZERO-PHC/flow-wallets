@@ -1,22 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button, Flex, Divider, Heading } from '@chakra-ui/react'
-import { Icon } from '@iconify/react';
+import WalletPlatformsIcons from './WalletPlatformsIcons';
 
 export default function WalletInfoComp({name, platforms, url}) {
-    console.log("PLATFORMS",platforms)
   return (
     <Flex flexDir="column" justify="space-between" gap={6}>
         <Flex gap={3}>
             <Image src={`/wallets/${url}`} alt={`${name} Wallet`} width={71} height={53} />
             <Flex flexDir="column" gap={1}>
                 <Heading variant="primary" w={"100%"} textAlign="initial">{name}</Heading>
-                <Flex gap={1}>
-                    {platforms.includes("web") && <Icon icon="bi:globe" />}
-                    {platforms.includes("chrome") && <Icon icon="ant-design:chrome-outlined" />}
-                    {platforms.includes("playstore") && <Icon icon="fa-brands:app-store" />}
-                    {platforms.includes("appstore") && <Icon icon="teenyicons:google-play-store-outline" />}
-                </Flex>
+                <WalletPlatformsIcons platforms={platforms} />
             </Flex>
         </Flex>
         <Flex gap={2} alignItems="center">

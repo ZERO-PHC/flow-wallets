@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Logo from "./Logo";
-import NavbarButton from "./NavbarButton";
 import ToggleColorMode from "./ToggleColorMode";
 import { useColorMode } from "@chakra-ui/react";
 import InputSearch from "./InputSearch";
@@ -9,8 +8,7 @@ const Navbar = () => {
   const { colorMode } = useColorMode();
   return (
     <Nav colorMode={colorMode}>
-      <Logo />
-
+      <Logo/>
       <SearchSection>
         <InputSearch placeholder={"Search"} size={"md"} />
       </SearchSection>
@@ -28,6 +26,7 @@ const Nav = styled.nav`
   z-index: 99;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: ${(props) =>
     props.colorMode === "dark" ? "#302F32" : "white"};
   padding: 0rem 3rem;

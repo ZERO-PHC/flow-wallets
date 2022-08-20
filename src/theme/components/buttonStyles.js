@@ -52,6 +52,12 @@ export const ButtonStyles = {
     }),
     simpleBtn: (props) => ({
         color: mode("green.100", "purple.100")(props),
+    }),
+    guideBtn: (props) => ({
+        bg: mode("green.100", "purple.100")(props),
+        p: 2,
+        borderRadius: "50%",
+        h: "50px"
     })
   },
 

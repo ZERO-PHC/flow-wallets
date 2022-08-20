@@ -8,9 +8,10 @@ export const wallets = [
     custodial: true,
     similarWallets: [2, 3],
     specs: {
+      crypto: "High",
       security: "High",
       anonymity: "Low",
-      usability: "High",
+      usability: "Medium",
     },
     platforms: ["web"],
     text:
@@ -29,6 +30,7 @@ export const wallets = [
     custodial: false,
     similarWallets: [1, 3],
     specs: {
+      crypto: "High",
       security: "High",
       anonymity: "High",
       usability: "High",
@@ -50,6 +52,7 @@ export const wallets = [
     custodial: true,
     similarWallets: [0, 4],
     specs: {
+      crypto: "High",
       security: "High",
       anonymity: "High",
       usability: "High",
@@ -72,6 +75,7 @@ export const wallets = [
     custodial: false,
     similarWallets: [1, 2],
     specs: {
+      crypto: "High",
       security: "High",
       anonymity: "High",
       usability: "High",
@@ -93,6 +97,7 @@ export const wallets = [
     custodial: true,
     similarWallets: [0, 3],
     specs: {
+      crypto: "High",
       security: "High",
       anonymity: "High",
       usability: "High",

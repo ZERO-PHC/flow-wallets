@@ -1,91 +1,67 @@
 import React from "react";
-import styled from "styled-components";
-import { Lorem } from "@chakra-ui/react";
-// next router
+import { Container, Heading, Text, Flex } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import Image from "next/image"
+import Image from "next/image";
+import { guides } from "../../data/guides";
+import StepsGuide from "../../components/StepsGuide";
+import GuidesFooter from "../../components/GuidesFooter";
 
 export default function Guide() {
   const router = useRouter();
   const { guideId } = router.query;
+  let nextGuideId = parseInt(guideId) + 1;
+  console.log(nextGuideId)
+  console.log(guides.length)
 
-  const handleNav = (increment ) => {
-    increment ? router.push(`/guide/${parseInt(guideId) + 1}`) : router.push(`/guide/${parseInt(guideId) - 1}`)
-  }
-
-  const Step = styled.div`
-    display: flex;
-    width: 1.6rem;
-    height: 1.6rem;
-    border-radius: 50%;
-    border: 2px solid lightgray;
-    background: ${(props) => props.done ?  "lightgreen" : "grey" };`
-
-  const Steps = () => {
-    // return an array of 7 elements
-    return Array(7)
-      .fill(0)
-      .map((_, i) => {
-        return <Step key={i} done={i <= guideId} />;
-      });
+  const handleNav = (increment) => {
+    increment
+      ? router.push(`/guide/${parseInt(guideId) + 1}`)
+      : router.push(`/guide/${parseInt(guideId) - 1}`);
   };
 
   return (
-    <Wrapper>
-      <header>
-        <main style={{height:"10rem", width:"10rem", position:"relative"}}>
-        <Image src={`/assets/guides/guide-${guideId}.png`} layout="fill" alt="illustration" />
-        </main>
-         </header>
-      <main>
-        <section className="text">
-          <h1> {guideId} guide</h1>
-          {/* <Lorem /> */}
-        </section>
-        <section className="steps">
-          <Steps />
-        </section>
-      </main>
-      <footer>
-        <div onClick={() => handleNav(false)} className="nxt-btn">action 1</div>
-        <div onClick={() => handleNav(true)} className="nxt-btn">action 2</div>
-      </footer>
-    </Wrapper>
+    <>
+      <Container variant="guideBg">
+        <Image
+          src={`/assets/guides/guide-${guideId}.png`}
+          layout="fixed"
+          width={320}
+          height={320}
+          alt="illustration"
+        />
+      </Container>
+      <Container p="5% 10%" variant="guideText" alignItems={"center"}>
+        <Flex gap="80px" maxW={"1100px"}>
+          {guides.map((guide, i) => {
+            return (
+              <Flex
+                key={i}
+                style={{ display: i === parseInt(guideId) ? "block" : "none" }}
+                flexDir="column"
+                w="80%"
+              >
+                <Heading pb="20px">{guide.title}</Heading>
+                {guide.text.map((text, i) => {
+                  return (
+                    <>
+                    <Heading variant="secondary" textAlign={"left"} fontSize="20px" mb="5px">{text.title}</Heading>
+                    <Text key={i} pb="20px">
+                      {text.paragraph}
+                    </Text>
+                    </>
+                  )}
+              )}
+              </Flex>
+            );
+          })}
+          <StepsGuide guides={guides} id={guideId} />
+        </Flex>
+        <GuidesFooter
+          next={nextGuideId == guides.length ? (() => router.push("/")) : (() => handleNav(true))}
+          previous={nextGuideId != 1 ? (() => handleNav(false)) : (() => {})}
+          title={nextGuideId == guides.length ? "Choose your wallet" : guides[nextGuideId].title}
+        />
+      </Container>
+    </>
   );
 }
-
-const Wrapper = styled.main`
-  height: 92vh;
-  width: 100%;
-
-  .nxt-btn{
-    background: #00bcd4;
-    border-radius: 50px;
-    width: 3rem;
-    height: 3rem;
-  }
-
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40%;
-    width: 100%;
-    background-color: #f5f5f5;
-  }
-
-  main {
-    height: 40%;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  footer {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-`;
