@@ -2,7 +2,6 @@ import { Container, Heading } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { features } from '../data/features';
-import { useDialog } from '../providers/DialogProvider';
 import { useTable } from '../providers/table/TableProvider';
 import { handleAction } from '../utils/generalUtils';
 import { handleFeatureSelection } from '../utils/tableUtils';
@@ -14,11 +13,11 @@ export default function TableComponent() {
     return (
     <Wrapper>
         <Container p={0} boxShadow={0} >
-            <Container p={2} borderRadius={"10px 0 0 10px"} boxShadow={0} justify="flex-start">
+            <Container p={2} borderRadius={"10px 0 0 10px"} boxShadow={0} justifyContent="flex-start">
             {Wallets.map((wallet, i) => (<WalletComponent key={i} wallet={wallet} handleAction={handleAction} />))}
             </Container>
         </Container>
-        <Container w={"20%"} boxShadow={0} borderRadius={0} p={"0 20px"} border="1px solid black" variant="tableFeatures">
+        <Container w={"20%"} h="auto" boxShadow={0} borderRadius={0} p={"0 20px"} border="1px solid black" variant="tableFeatures">
             <Heading fontSize={"20px"} textAlign="center" fontFamily={"Blinker Bold"}> FEATURES </Heading>
             {features.map((feature, i) => <FeatureComponent key={i} feature={feature} handleAction={handleAction} dialog={true} handleFeatureSelection={(feature) => handleFeatureSelection(feature, SelectedFeatures, setSelectedFeatures)} />)}
         </Container>
@@ -29,10 +28,9 @@ export default function TableComponent() {
 const Wrapper = styled.div`
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: stretch;
 flex-direction: row;
 width: 100%;
-height: 100%;
 background-color: #f5f5f5;
 border-radius: 10px;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);

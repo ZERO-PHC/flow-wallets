@@ -10,8 +10,6 @@ export default function PreferencesSection() {
             <Grid gap={20} autoFlow="column dense">
                 <PreferenceCard  id="non-custodial" title="Non-Custodial"/>
                 <PreferenceCard id="custodial" title="Custodial"/>
-                {/* <Card handleAction={handleAction} target="users" />
-                <Card handleAction={handleAction} target="devs" /> */}
             </Grid>
         </Flex>
 

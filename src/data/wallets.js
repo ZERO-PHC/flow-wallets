@@ -15,7 +15,7 @@ export const wallets = [
     platforms: ["web"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
-    url: "https://starlink.com",
+    url: "dapperWallet.png",
     features: [
       "fiat-token"
     ]
@@ -36,7 +36,7 @@ export const wallets = [
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
-    url: "https://starlink.com",
+    url: "lilicoWallet.png",
     features: [
       "nft-support"
     ]
@@ -57,7 +57,7 @@ export const wallets = [
     platforms: ["web", "playstore", "appstore"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
-      url: "https://starlink.com",
+      url: "bloctoWallet.png",
       features: [
         "email-auth"
       ]
@@ -79,7 +79,7 @@ export const wallets = [
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
-    url: "https://starlink.com",
+    url: "ledgerWallet.png",
     features: [
       "hardware-support"
     ]
@@ -100,7 +100,7 @@ export const wallets = [
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
-    url: "https://starlink.com",
+    url: "lilicoWallet.png",
     features: [
       "staking"
     ]

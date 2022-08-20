@@ -3,12 +3,12 @@ import Image from 'next/image'
 import { Button, Flex, Divider, Heading } from '@chakra-ui/react'
 import { Icon } from '@iconify/react';
 
-export default function WalletInfoComp({name, platforms}) {
+export default function WalletInfoComp({name, platforms, url}) {
     console.log("PLATFORMS",platforms)
   return (
     <Flex flexDir="column" justify="space-between" gap={6}>
         <Flex gap={3}>
-            <Image src="/wallets/lilicoWallet.png" alt="Lilico Wallet" width={60} height={53} />
+            <Image src={`/wallets/${url}`} alt={`${name} Wallet`} width={71} height={53} />
             <Flex flexDir="column" gap={1}>
                 <Heading variant="primary" w={"100%"} textAlign="initial">{name}</Heading>
                 <Flex gap={1}>
