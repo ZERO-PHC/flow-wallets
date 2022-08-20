@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Button, Heading, Container, chakra } from "@chakra-ui/react";
-import { Checkbox } from "@chakra-ui/react";
+import { Checkbox } from "@chakra-ui/react"
 
 export default function PreferenceCard({ title, AdvantageItem1, AdvantageItem2, AdvantageItem3, DisadvantageItem1, DisadvantageItem2, DisadvantageItem3 }) {
   return (
