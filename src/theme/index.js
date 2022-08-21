@@ -117,6 +117,9 @@ const customTheme = {
         h: "100%",
       }),
       variants: {
+        heroBg: (props) => ({
+          bg: mode("linear-gradient(89.64deg, rgba(167, 255, 218, 0.1) 0.31%, rgba(99, 69, 237, 0.1) 172.01%)", "linear-gradient(89.64deg, rgba(167, 255, 218, 0.4) 0.31%, rgba(99, 69, 237, 0.4) 172.01%)")(props),
+        }),
         preferenceCard: (props) => ({
           width: "480px",
           height: "270px",
