@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 export default function StepsGuide({ guides, id }) {
   return (
-    <Flex flexDir="column" w="30%" p={5}>
+    <Flex flexDir="column" w="30%" p={5} gap={2}>
       <Heading variant="secondary" fontSize={"1.8rem"} ml={0}>Related Guides</Heading>
       {Array(guides.length)
         .fill(0)
         .map((_, i) => {
           return (
-            <Flex key={i} mt={4}>
+            <Flex key={i} mt={4} gap={2}>
               <Step key={i} done={i <= id} />
               <Text>{guides[i].title}</Text>
             </Flex>

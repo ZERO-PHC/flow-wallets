@@ -163,7 +163,7 @@ const customTheme = {
             bg: mode("green.200", "purple.200")(props),
             boxShadow: 0,
             border: "1px solid",
-            borderColor: "white",
+            borderColor: mode("black.100", "white.100")(props),
             borderRadius: "50%",
             w: "10px",
             h: "10px",
