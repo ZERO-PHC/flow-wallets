@@ -5,11 +5,13 @@ import { useRouter } from 'next/router'
 import { handleAction } from '../utils/generalUtils'
 import { handleSelection } from '../utils/preferencesUtils'
 import { Checkbox } from "@chakra-ui/react"
+import { useDialog } from "../providers/DialogProvider";
 
 
 export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageItem2, AdvantageItem3, DisadvantageItem1, DisadvantageItem2, DisadvantageItem3 }) {
   const router = useRouter()
-  const { WalletPreference, setOpenSearch, setWalletPreference } = useTable()
+  const { WalletPreference, setWalletPreference } = useTable()
+  const { setOpenSearch  } = useDialog()
 
   return (
     <Container
@@ -38,7 +40,7 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
           </chakra.ul>
         </Flex>
       </Flex>
-      <Button onClick={() => handleAction("guide", id === "custodial" ? 3 : 4, router)}
+      <Button onClick={() => handleAction("guide", id === "custodial" ? 3 : 4, router, setOpenSearch)}
         variant="bottomLine">Learn More</Button>
     </Container>
   );
