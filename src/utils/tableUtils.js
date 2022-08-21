@@ -63,14 +63,12 @@ const isNotCustodial = (wallet,tab) =>
 
 
 export const handleFeatureSelection = (feature, SelectedFeatures, setSelectedFeatures) => {
-    console.log("feature", feature);
     if (SelectedFeatures.includes(feature)) {
-      // removes the feature from the selected features array
       setSelectedFeatures(SelectedFeatures.filter((f) => f !== feature));
     } else {
       setSelectedFeatures([...SelectedFeatures, feature]);
     }
-  };  
+  };
 
  export const handleTabsChange = (index, setTabIndex) => {
     setTabIndex(index);

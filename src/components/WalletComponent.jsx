@@ -2,12 +2,14 @@ import React from "react";
 import { Icon, IconButton, Container, Divider, Flex } from "@chakra-ui/react";
 import WalletSpecs from "./WalletSpecs";
 import WalletInfoComp from "./WalletInfoComp";
+import { useRouter } from "next/router";
 
 export const WalletComponent = ({ handleAction, wallet }) => {
+  const router = useRouter();
   return (
     <Container
       boxShadow={0}
-      onClick={() => handleAction("wallet", wallet.id)}
+      onClick={() => handleAction("wallet", wallet.id, router)}
       display="flex"
     >
       <Flex justify="space-between">

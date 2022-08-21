@@ -1,5 +1,5 @@
 export const handleAction = (type, resource, router, setOpenSearch, setSelectedFeatures, SelectedFeatures) => {
-    type === "feature" ? scrollToBottom(setOpenSearch, resource, setSelectedFeatures, SelectedFeatures) : router.push(`/${type}/${resource}`);
+    type === "feature" ? scrollToBottom(setOpenSearch, resource, setSelectedFeatures, SelectedFeatures) : handleNav(type,resource, router, setOpenSearch);
   };
   
 export const scrollToBottom = (setOpenSearch, id, setSelectedFeatures, SelectedFeatures) => {
@@ -12,4 +12,9 @@ export const scrollToBottom = (setOpenSearch, id, setSelectedFeatures, SelectedF
       });
     };
     
+
+export const handleNav = (type, resource, router, setOpenSearch) => {
+  !(resource !== 3 || resource !== 4 ) && setOpenSearch(false);
+  router.push(`/${type}/${resource}`);
+}
   
