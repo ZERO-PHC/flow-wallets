@@ -15,7 +15,8 @@ export const scrollToBottom = (setOpenSearch, id, setSelectedFeatures, SelectedF
 
 export const handleNav = (type, resource, router, setOpenSearch) => {
   // if it isnt 3 or 4 close the search
-  (resource !== 3 || resource !== 4 ) && setOpenSearch(false);
+  // (resource !== 3 || resource !== 4 ) && setOpenSearch(false);
+  setOpenSearch(false);
   router.push(`/${type}/${resource}`);
 }
   
