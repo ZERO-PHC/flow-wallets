@@ -7,7 +7,7 @@ import TabsComponent from '../components/TabsComponent'
 
 export default function TableSection() {
     return (
-        <Flex display="flex" pb="6rem" direction={"column"} w={"100%"} h="70vh" align="center" justify="start">
+        <Flex display="flex" pb="6rem" direction={"column"} w={"100%"} align="center" justify="start">
             <TabsComponent  />
             <TableComponent   />
         </Flex>

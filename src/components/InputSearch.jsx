@@ -9,7 +9,6 @@ export default function InputSearch({ placeholder, size }) {
     <InputGroup size={size}>
       <InputLeftElement pointerEvents="none"><Icon icon="akar-icons:search" color="gray" width="20" /></InputLeftElement>
       <Input value={Value} onChange={handleChange} onFocus={() => handleDialogAction("search")} placeholder={placeholder} size={size} borderColor="gray.200" border="2px solid" borderRadius={20} />
-
     </InputGroup>
   )
 
