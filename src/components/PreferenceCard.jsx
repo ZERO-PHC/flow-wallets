@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Button, Heading, Container, chakra } from "@chakra-ui/react";
+import { Flex, Button, Heading, Container, chakra, Divider } from "@chakra-ui/react";
 import { useTable } from '../providers/table/TableProvider'
 import { useRouter } from 'next/router'
 import { handleAction } from '../utils/generalUtils'
@@ -19,7 +19,10 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
       variant="preferenceCard"
     >
       <Flex justify={"center"} w={"100%"}>
+        <Flex flexDir="column" marginLeft="auto">
         <Heading variant="primary"> {title} </Heading>
+        <Divider variant="bottomDetail" h="3px" w="50px"/>
+        </Flex>
         <Checkbox isChecked={WalletPreference === id} marginLeft="auto" onChange={(e) => handleSelection(e, id, WalletPreference, setWalletPreference)} />
       </Flex>
       <Flex justifyContent={'space-evenly'} gap="50px">

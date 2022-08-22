@@ -64,7 +64,7 @@ const customTheme = {
   },
   layerStyles: {
     bullet: {
-        border: "1px solid",
+      border: "1px solid",
     },
   },
   components: {
@@ -118,7 +118,10 @@ const customTheme = {
       }),
       variants: {
         heroBg: (props) => ({
-          bg: mode("linear-gradient(89.64deg, rgba(167, 255, 218, 0.1) 0.31%, rgba(99, 69, 237, 0.1) 172.01%)", "linear-gradient(89.64deg, rgba(167, 255, 218, 0.4) 0.31%, rgba(99, 69, 237, 0.4) 172.01%)")(props),
+          bg: mode(
+            "linear-gradient(89.64deg, rgba(167, 255, 218, 0.1) 0.31%, rgba(99, 69, 237, 0.1) 172.01%)",
+            "linear-gradient(89.64deg, rgba(167, 255, 218, 0.4) 0.31%, rgba(99, 69, 237, 0.4) 172.01%)"
+          )(props),
         }),
         preferenceCard: (props) => ({
           width: "480px",
@@ -153,34 +156,34 @@ const customTheme = {
           boxShadow: 0,
         }),
         bullet: (props) => ({
-            bg: mode("green.200", "purple.200")(props),
-            boxShadow: 0,
-            border: "1px solid",
-            borderColor: mode("green.200", "purple.200")(props),
-            borderRadius: "50%",
-            w: "12px",
-            h: "12px",
-            p: 0
+          bg: mode("green.200", "purple.200")(props),
+          boxShadow: 0,
+          border: "1px solid",
+          borderColor: mode("green.200", "purple.200")(props),
+          borderRadius: "50%",
+          w: "12px",
+          h: "12px",
+          p: 0,
         }),
         bulletWhite: (props) => ({
-            bg: mode("green.200", "purple.200")(props),
-            boxShadow: 0,
-            border: "1px solid",
-            borderColor: mode("black.100", "white.100")(props),
-            borderRadius: "50%",
-            w: "10px",
-            h: "10px",
-            p: 0
+          bg: mode("green.200", "purple.200")(props),
+          boxShadow: 0,
+          border: "1px solid",
+          borderColor: mode("black.100", "white.100")(props),
+          borderRadius: "50%",
+          w: "10px",
+          h: "10px",
+          p: 0,
         }),
         walletPage: (props) => ({
-            bg: mode("white", "black.100")(props),
-            boxShadow: 0,
-            borderRadius: 0,
-            p: 0
+          bg: mode("white", "black.100")(props),
+          boxShadow: 0,
+          borderRadius: 0,
+          p: 0,
         }),
         lilicoBg: {
-            bg: "linear-gradient(180deg, #F1C7A1 -24.16%, rgba(173, 181, 184, 0) 103.6%)"
-        }
+          bg: "linear-gradient(180deg, #F1C7A1 -24.16%, rgba(173, 181, 184, 0) 103.6%)",
+        },
       },
       Tabs: {
         baseStyle: (props) => ({
@@ -198,19 +201,39 @@ const customTheme = {
       },
       Table: {
         variants: {
-            walletTable: {
-                th: {
-                    borderBottom: "1px",
-                    borderColor: "white",
-                },
-                td: {
-                    borderRight: "1px",
-                    borderColor: "white",
-                }
-            }
-        }
-      }
+          walletTable: {
+            th: {
+              borderBottom: "1px",
+              borderColor: "white",
+            },
+            td: {
+              borderRight: "1px",
+              borderColor: "white",
+            },
+          },
+        },
+      },
     },
+    Modal: {
+      baseStyle: (props) => ({
+        dialog: {
+          bg: mode("white", "gray.600")(props),
+        },
+        closeButton:{
+          color: mode("white", "purple.100")(props),
+          _hover: {
+            bg: mode("black.100", "purple.100")(props),
+          }
+        }
+      }),
+    },
+    Divider: {
+      variants: {
+        bottomDetail: (props) => ({
+          bg: mode("green.100", "purple.100")(props),
+        })
+      }
+    }
   },
 };
 
