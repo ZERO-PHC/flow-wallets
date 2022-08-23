@@ -5,6 +5,7 @@ import { wallets } from '../data/wallets'
 import { features } from '../data/features'
 import { guides } from '../data/guides'
 const elements = [...wallets, ...features, ...guides]
+console.log(elements)
 
 export const DialogContext = createContext({});
 
@@ -32,7 +33,10 @@ export default function DialogProvider({ children }) {
     }
   
     const getMatchedElements = (value) => {
-      const matchedElements = elements.filter(element => element.name.toLowerCase().includes(value.toLowerCase()))
+      const matchedElements = elements.filter(element => {
+        element.name.toLowerCase().includes(value.toLowerCase()) ||
+        element.text.map(text => text.paragraph.toLowerCase().includes(value.toLowerCase()))
+      })
       setElements(matchedElements)
     }
 

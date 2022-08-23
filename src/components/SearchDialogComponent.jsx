@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-// box chakra ui
-import { Box, CloseButton, Divider, Input } from '@chakra-ui/react'
+import { Box, CloseButton, Container } from '@chakra-ui/react'
 import { useDialog } from "../providers/DialogProvider";
 
 import ElementComponent from './ElementComponent';
@@ -9,7 +8,6 @@ import ElementComponent from './ElementComponent';
 
 export default function SearchDialogComponent({ handleAction }) {
   const { OpenSearch, setOpenSearch, handleDialogAction, Elements, Value, scroll } = useDialog()
- 
 
   if (OpenSearch)
     return (
@@ -20,18 +18,13 @@ export default function SearchDialogComponent({ handleAction }) {
           </Box>
 
         </Dialog>
-        <Box mt={"7rem"} left={"25%"} top={scroll } zIndex={98} position={"absolute"} background={"white"} h={"37rem"} w="50%" borderRadius={"lg"} border="1px solid #eaeaea" >
-      
+        <Container p={3} mt={"7rem"} left={"25%"} top={scroll } justifyContent="flex-start" zIndex={98} position={"absolute"} h={"70vh"} w="50%" overflowY={'scroll'} borderRadius={"lg"} border="1px solid #eaeaea" >
           <Box>
             { Elements.map((element, i) => <ElementComponent key={i} element={element} handleAction={handleAction} />)}
           </Box>
-        </Box>
-
-
-
+        </Container>
       </>
     )
-
 }
 
 

@@ -13,7 +13,7 @@ export default function Home() {
       {/* <SearchDialogComponent /> */}
       <DialogComponent />
       <HeroSection />
-      <Flex flexDir={"column"} p={"10%"}>
+      <Flex flexDir={"column"} p={"10%"} py="6%">
         <PreferencesSection />
         <TableSection />
       </Flex>

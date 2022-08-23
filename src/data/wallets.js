@@ -15,8 +15,9 @@ export const wallets = [
       usability: "Medium",
     },
     platforms: ["web"],
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
+    text:[
+      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+    ],
     url: "dapperWallet.png",
     urlBig: "dapperBig.png",
     logo: "logo/dapper.png",
@@ -42,8 +43,9 @@ export const wallets = [
       usability: "High",
     },
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
+    text:[
+      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+    ],
     url: "lilicoWallet.png",
     urlBig: "lilicoBig.png",
     logo: "logo/lilico.png",
@@ -69,8 +71,9 @@ export const wallets = [
       usability: "High",
     },
     platforms: ["web", "playstore", "appstore"],
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
+    text:[
+      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+    ],
       url: "bloctoWallet.png",
       urlBig: "bloctoBig.png",
       logo: "logo/blocto.png",
@@ -97,8 +100,9 @@ export const wallets = [
       usability: "Low",
     },
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
+    text:[
+      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+    ],
     url: "ledgerWallet.png",
     urlBig: "ledgerBig.png",
     logo: "logo/ledger.png",
@@ -124,8 +128,9 @@ export const wallets = [
       usability: "High",
     },
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur",
+    text:[
+      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+    ],
     url: "lilicoWallet.png",
     logo: "logo/finoa.png",
     linearBg: "linear-gradient(180deg, #32C7A1 -82.81%, rgba(173, 181, 184, 0) 103.6%);",
