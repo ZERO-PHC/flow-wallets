@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-// box chakra ui
 import { Box, CloseButton, Container } from '@chakra-ui/react'
 import { useDialog } from "../providers/DialogProvider";
 

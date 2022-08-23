@@ -1,6 +1,6 @@
 export const guides = [
   {
-    id: "guide1",
+    id: "0",
     name: "guide 1",
     selected: false,
     type: "guide",
@@ -35,7 +35,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide2",
+    id: "1",
     name: "guide 2",
     selected: false,
     type: "guide",
@@ -76,7 +76,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide3",
+    id: "2",
     name: "Guide 3",
     selected: false,
     type: "guide",
@@ -107,7 +107,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide4",
+    id: "3",
     name: "Guide 4",
     selected: false,
     type: "guide",
@@ -174,7 +174,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide5",
+    id: "4",
     name: "Guide 5",
     selected: false,
     type: "guide",
@@ -241,7 +241,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide6",
+    id: "5",
     name: "Guide 6",
     selected: false,
     type: "guide",

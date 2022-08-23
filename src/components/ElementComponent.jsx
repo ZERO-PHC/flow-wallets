@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
-import { Flex, Heading, Icon, IconButton, Text, Container } from "@chakra-ui/react";
+import { Flex, Heading, Button, Text, Container } from "@chakra-ui/react";
 import { handleAction } from "../utils/generalUtils";
 import { useRouter } from "next/router";
 import { useDialog } from "../providers/DialogProvider";
 import { useTable } from "../providers/table/TableProvider";
+import { Icon } from '@iconify/react';
 
 export default function ElementComponent({ element }) {
   const router = useRouter();
@@ -17,9 +17,9 @@ export default function ElementComponent({ element }) {
         <Heading fontSize="1.4rem">{element.name}</Heading>
         <Text>{element.type}</Text>
       </Flex>
-      <IconButton>
-        <Icon />
-      </IconButton>
+      <Button onClick={() => handleAction(element.type, element.id, router, setOpenSearch, setSelectedFeatures,  SelectedFeatures)}>
+      <Icon icon="bi:arrow-return-right" width="20" />
+      </Button>
     </Container>
   );
 }
