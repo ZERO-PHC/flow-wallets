@@ -6,6 +6,8 @@ import Layout from "../components/Layout";
 import theme from "../theme";
 import DialogProvider from "../providers/DialogProvider";
 import TableProvider from "../providers/table/TableProvider";
+import SearchDialogComponent from "../components/SearchDialogComponent";
+
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps }) {
       <DialogProvider>
         <TableProvider>
           <Layout>
+            <SearchDialogComponent />
             <Component {...pageProps} />
           </Layout>
         </TableProvider>

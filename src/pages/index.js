@@ -10,7 +10,7 @@ import { Flex } from "@chakra-ui/react";
 export default function Home() {
   return (
     <>
-      <SearchDialogComponent />
+      {/* <SearchDialogComponent /> */}
       <DialogComponent />
       <HeroSection />
       <Flex flexDir={"column"} p={"10%"}>
