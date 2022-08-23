@@ -7,7 +7,6 @@ import { handleSelection } from '../utils/preferencesUtils'
 import { Checkbox } from "@chakra-ui/react"
 import { useDialog } from "../providers/DialogProvider";
 
-
 export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageItem2, AdvantageItem3, DisadvantageItem1, DisadvantageItem2, DisadvantageItem3 }) {
   const router = useRouter()
   const { WalletPreference, setWalletPreference } = useTable()
