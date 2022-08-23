@@ -32,7 +32,7 @@ export default function WalletView() {
 
   const Lorem = ({ text }) => {
     // return a long string of -container
-    return <p>{text}</p>;
+    return <p>{text[0].paragraph}</p>;
   };
 
   if (!Wallet) {

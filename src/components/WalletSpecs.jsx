@@ -14,7 +14,9 @@ export default function WalletSpecs({ wallet, view }) {
     } else if (wallet.specs.security == "Low") {
       setColor("red");
     }
-  }, [wallet]);
+    // Dont add a dependency here , it was creating a ssr bug
+  }, []);
+  
   return (
     <Flex gap={4} alignItems="flex-start">
       <Flex flexDir="column" alignItems={"center"} gap={3}>
