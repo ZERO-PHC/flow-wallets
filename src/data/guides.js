@@ -1,6 +1,6 @@
 export const guides = [
   {
-    id: "guide1",
+    id: "0",
     name: "What is a Wallet?",
     selected: false,
     type: "guide",
@@ -35,7 +35,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide2",
+    id: "1",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-1.png",
@@ -75,7 +75,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide3",
+    id: "2",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-2.png",
@@ -105,7 +105,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide4",
+    id: "3",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-4.png",
@@ -171,7 +171,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide5",
+    id: "4",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-5.png",
@@ -237,7 +237,7 @@ export const guides = [
     ]
   },
   {
-    id: "guide6",
+    id: "5",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-5.png",
