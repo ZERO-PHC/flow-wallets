@@ -1,7 +1,7 @@
 export const guides = [
   {
     id: "guide1",
-    name: "guide 1",
+    name: "What is a Wallet?",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-0.png",
@@ -36,11 +36,10 @@ export const guides = [
   },
   {
     id: "guide2",
-    name: "guide 2",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-1.png",
-    title: "Why do you need a Wallet?",
+    name: "Why do you need a Wallet?",
     text: [
       {
         paragraph: "To have a meaningful interaction with a blockchain, you first need a wallet. You can have it installed as an application on your smartphone, client software on your desktop, or a special device (hardware wallet). In particular, a wallet will serve as the interface through which you can perform the following functions:"
@@ -77,11 +76,10 @@ export const guides = [
   },
   {
     id: "guide3",
-    name: "Guide 3",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-2.png",
-    title: "What are wallet keys?",
+    name: "What are wallet keys?",
     text: [
       {
         paragraph: "To the ordinary end-user, a wallet is a mobile application, software on a computer, an account on a website, or a special electronic device (hardware wallet). In technical terms, however, a crypto wallet is a pair of private and public keys. "
@@ -108,11 +106,10 @@ export const guides = [
   },
   {
     id: "guide4",
-    name: "Guide 4",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-4.png",
-    title: "What types of wallets are there?",
+    name: "What types of wallets are there?",
     text: [
       {
         paragraph: "Wallets come in various types, but all fall in either cold or hot categories. "
@@ -175,11 +172,10 @@ export const guides = [
   },
   {
     id: "guide5",
-    name: "Guide 5",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-5.png",
-    title: "What are Custodial Wallets?",
+    name: "What are Custodial Wallets?",
     text: [
       {
         paragraph: "A custodial wallet is a wallet you can use to transact crypto, but you don't have control over its private keys. The private keys remain in the control of a trusted third-party service provider, such as a centralized exchange. "
@@ -242,11 +238,10 @@ export const guides = [
   },
   {
     id: "guide6",
-    name: "Guide 6",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-5.png",
-    title: "What are Non-Custodial Wallets?",
+    name: "What are Non-Custodial Wallets?",
     text: [
       {
         paragraph: "A non-custodial wallet is one where the end-user has full control of the private keys. That means no one else has access to the wallet and the funds received and secured through it. Indeed,  a non-custodial wallet is designed to make the end-user their own bank, a primary benefit of blockchain technology."
