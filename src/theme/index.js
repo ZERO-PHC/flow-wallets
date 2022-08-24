@@ -1,8 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import { ButtonStyles as Button } from "./components/buttonStyles";
-import { InputStyles as Input } from "./components/inputStyles";
-import { BoxStyles as Box } from "./components/boxStyles";
 import { HeadingStyles as Heading } from "./components/headingStyles";
 
 //include custom options here
@@ -17,6 +15,12 @@ const customTheme = {
         bg: mode("white", "black.200")(props),
       },
     }),
+  },
+  breakpoints: {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
   },
   variantTests: {
     w: "100px",
@@ -141,8 +145,8 @@ const customTheme = {
           borderRadius: 0,
           boxShadow: 0,
           h: "auto",
-          w: "35%",
-          gap: "20px",
+          w: { md: "100%", lg: "35%" },
+          gap: {lg: "20px"},
         }),
         guideBg: (props) => ({
           bg: "linear-gradient(89.64deg, rgba(167, 255, 218, 0.4) 0.31%, rgba(99, 69, 237, 0.4) 172.01%)",

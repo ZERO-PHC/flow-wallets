@@ -9,9 +9,11 @@ export default function OverviewCard({title, subtitle, btnText}) {
   const {setOpenSearch} = useDialog()
 
   return (
-    <Container flexDir="column" variant="overview" p={"15px 30px"} pr={12}>
+    <Container flexDir="column" variant="overview" p={"15px 30px"}>
         <Text>{title}</Text>
-        <Text display="flex" gap={2}>{subtitle}<Button onClick={() => handleAction("guide", 0, router, setOpenSearch)}  variant="simpleBtn">{btnText}</Button></Text>
+        <Text display="flex">{subtitle}
+        </Text>
+        <Button onClick={() => handleAction("guide", 0, router, setOpenSearch)}  variant="simpleBtn" p="4px">{btnText}</Button>
     </Container>
   )
 }

@@ -12,8 +12,6 @@ export default function Guide() {
   const { guideId } = router.query;
   const [guide, setGuide] = useState(null);
   let nextGuideId = parseInt(guideId) + 1;
-  console.log(nextGuideId)
-  console.log(guides.length)
 
   useEffect(() => {
    setGuide({
@@ -51,7 +49,7 @@ export default function Guide() {
                 w="80%"
                 
               >
-                <Heading w={"100%"} textAlign="left" pb="20px">{guide.title}</Heading>
+                <Heading w={"100%"} textAlign="left" pb="20px">{guide.name}</Heading>
                 {guide.text.map((text, i) => {
                   return (
                     <>

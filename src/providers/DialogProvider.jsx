@@ -5,7 +5,6 @@ import { wallets } from '../data/wallets'
 import { features } from '../data/features'
 import { guides } from '../data/guides'
 const elements = [...wallets, ...features, ...guides]
-console.log("els",elements)
 
 export const DialogContext = createContext({});
 
@@ -21,12 +20,10 @@ export default function DialogProvider({ children }) {
     useEffect(() => {
       window.addEventListener('scroll', () => {
         setScroll(window.scrollY);
-        // console.log("sy", window.scrollY)
       }), [scroll];
     });
   
     const handleChange = (e) => {
-        console.log(e.target.value)
       setValue(e.target.value);
       // getMatchedWallets(e.target.value);
       getMatchedElements(e.target.value);
@@ -44,7 +41,6 @@ export default function DialogProvider({ children }) {
 
 
     const handleDialogAction = (type) => {
-        console.log("handleDialogAction")
         type === "search" ? setOpenSearch(!OpenSearch) : setOpen(!Open)
     }
 

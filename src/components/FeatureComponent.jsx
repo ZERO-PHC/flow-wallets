@@ -13,22 +13,20 @@ import FeatureModal from "./FeatureModal";
 
 export const FeatureComponent = ({
   feature,
-  handleAction,
   dialog,
   handleFeatureSelection,
 }) => {
-  const { handleDialogAction } = useDialog();
   const { SelectedFeatures } = useTable();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Flex justifyContent={"space-between"} p="0 20px">
+      <Flex flexDir={{sm: "column-reverse" ,md: "column-reverse", lg: "row"}} justifyContent={"space-between"} alignItems={{sm: "center" ,md: "center"}} gap={{sm: "10px", md: "10px", lg: "0"}} p="15px">
         <Checkbox
           isChecked={SelectedFeatures.includes(feature.id)}
           onChange={() => handleFeatureSelection(feature.id)}
           size="lg"
         />
-        <Flex flexDir="column" alignItems={"flex-end"}>
+        <Flex flexDir={"column"} alignItems={{sm: "center", md: "center", lg: "flex-end"}} gap="5px">
           <Text fontFamily={"Blinker SemiBold"} fontSize="1.1rem">
             {feature.name}
           </Text>
@@ -38,8 +36,9 @@ export const FeatureComponent = ({
         </Flex>
       </Flex>
       <Divider
-        h="1px"
-        w="90%"
+        orientation={{sm: "vertical", md: "vertical", lg: "vertical"}}
+        h={{sm: "90%" ,md: "90%" ,lg:"1px"}}
+        w={{sm: "1px" ,md: "1px" ,lg: "90%"}}
         bg={"gray.200"}
         borderRadius={3}
         boxShadow={0}

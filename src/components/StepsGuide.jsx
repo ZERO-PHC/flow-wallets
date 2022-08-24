@@ -12,7 +12,7 @@ export default function StepsGuide({ guides, id }) {
           return (
             <Flex key={i} mt={4} gap={2}>
               <Step key={i} done={i <= id} />
-              <Text>{guides[i].title}</Text>
+              <Text>{guides[i].name}</Text>
             </Flex>
           );
         })}
