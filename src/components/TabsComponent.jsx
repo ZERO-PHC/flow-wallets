@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
 import {
   Tabs,
   TabList,
-  TabPanels,
   Tab,
-  TabPanel,
   Container,
 } from "@chakra-ui/react";
 import { useTable } from "../providers/table/TableProvider";
@@ -15,14 +12,14 @@ export default function TabsComponent() {
   const { categories, tabIndex, setTabIndex } = useTable();
 
   return (
-    <Container w="auto" h="auto" variant="overview" m={5} borderRadius={14} p={"0px 12px"}>
+    <Container w={{sm: "max-content" ,md:"auto"}} h="auto" variant="overview" m={5} borderRadius={14} p={"0px 12px"}>
       <Tabs index={tabIndex} onChange={(i) => handleTabsChange(i, setTabIndex)} colorScheme='purple'>
         <TabList>
           {categories.map((category, index) => (
             <Tab 
-            p=".8rem 2.2rem" 
+            p={{sm: ".3rem 1rem", md: ".6rem 2rem",lg: ".8rem 2.2rem" }}
             key={index}
-            fontSize="1.3rem"
+            fontSize={{sm: ".8rem",md: "1rem", lg: "1.3rem"}}
             >
               {category.name}
             </Tab>

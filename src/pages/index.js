@@ -8,7 +8,7 @@ import { Flex } from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react"
 
 export default function Home() {
-  const [isMobile] = useMediaQuery("(max-width: 780px)") 
+  const [isMobile] = useMediaQuery("(max-width: 280px)") 
   return (
     <>
     {
@@ -16,7 +16,7 @@ export default function Home() {
       <>
       <DialogComponent />
       <HeroSection />
-      <Flex flexDir={"column"} p={"10%"} py={{sm: "12%", md: "12%", lg: "6%"}}>
+      <Flex flexDir={"column"} p={{sm: "7%", md: "10%", lg: "10%"}} py={{sm: "12%", md: "12%", lg: "6%"}}>
         <PreferencesSection />
         <TableSection />
       </Flex>

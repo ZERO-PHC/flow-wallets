@@ -105,7 +105,7 @@ const customTheme = {
         },
       },
       defaultProps: {
-        size: "xg",
+        size: {sm: "lg", md: "xg", lg: "xg"},
       },
     },
     Container: {
@@ -128,7 +128,7 @@ const customTheme = {
           )(props),
         }),
         preferenceCard: (props) => ({
-          width: "480px",
+          width: { sm: "330px", md: "480px", lg: "480px"},
           height: "270px",
           padding: "20px 40px",
         }),
@@ -136,6 +136,7 @@ const customTheme = {
           bg: mode("black.200", "gray.600")(props),
           color: mode("white", "white")(props),
           fontFamily: "Blinker SemiBold",
+          fontSize: {sm: ".7rem", md: "1rem", lg: "1rem"},
         }),
         tableFeatures: (props) => ({
           bg: mode("white", "gray.500")(props),

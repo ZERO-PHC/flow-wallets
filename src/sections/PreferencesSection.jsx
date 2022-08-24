@@ -7,12 +7,12 @@ export default function PreferencesSection() {
   return (
     <Flex
       w={"100%"}
-      h="60vh"
       align="center"
       justify="center"
       flexDir={"column"}
+      mb={{sm: 3, md: 5, lg: 14}}
     >
-      <Heading mb={8} mr={{sm: "inherit", md: "inherit", lg: "auto"}}>
+      <Heading mb={8} mr={{sm: "inherit", md: "inherit", lg: "auto"}} fontSize={{sm: "1.4rem", md: "2rem", lg: "2.5rem"}}>
         Choose your wallet preferences
       </Heading>
       <Flex gap={{sm: 10, md: 5, lg: 10}} flexWrap={{sm: "wrap", md: "wrap", lg: "nowrap"}}>
