@@ -5,7 +5,7 @@ import WalletPlatformsIcons from './WalletPlatformsIcons';
 
 export default function WalletInfoComp({name, platforms, url}) {
   return (
-    <Flex flexDir="column" justify="space-between" gap={{sm: 1, md: 4, lg: 6}}>
+    <Flex flexDir="column" justify="space-between" gap={{sm: 1, md: 4, lg: 6}} mb={{sm: "15px", md: 0, lg: 0}}>
         <Flex gap={3}>
             <Image src={`/wallets/${url}`} alt={`${name} Wallet`} width={71} height={53} />
             <Flex flexDir={{md: "column", lg: "column"}} alignItems={{sm: "center"}} gap={{sm: 4, md: 1, lg: 1}}>
@@ -14,9 +14,9 @@ export default function WalletInfoComp({name, platforms, url}) {
             </Flex>
         </Flex>
         <Flex gap={2} alignItems="center" justifyContent={{sm: "center", md: "normal", lg: "normal"}}>
-            <Button variant="semiBold">LEARN MORE</Button>
+            <Button variant={{sm: "device", md: "semiBold", lg: "semiBold"}}>LEARN MORE</Button>
             <Divider w="2px" orientation='vertical' bg={"gray.500"} borderRadius={3} border="none"/>
-            <Button  variant="semiBold">SEE WEBSITE</Button>
+            <Button  variant={{sm: "device", md: "semiBold", lg: "semiBold"}}>SEE WEBSITE</Button>
         </Flex>
     </Flex>
   )
