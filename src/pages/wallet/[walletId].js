@@ -2,14 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // next router
 import { useRouter } from "next/router";
-import Image from "next/image";
-import { WalletComponent } from "../../components/WalletComponent";
+import { Image } from '@chakra-ui/react'
 import { wallets } from "../../data/wallets";
 import { Avatar, Container, Flex, Heading, Divider } from "@chakra-ui/react";
-import { WalletPlatforms } from "../../components/WalletPlatforms";
-import WalletSpecs from "../../components/WalletSpecs";
 import WalletPlatformsIcons from "../../components/WalletPlatformsIcons";
-import SpecsBulletsView from "../../components/SpecsBulletsView";
 import WalletsBulletsRank from "../../sections/WalletsBulletsRank";
 import SimilarWalletsSection from "../../sections/SimilarWalletsSection";
 import WalletPageFooter from "../../components/WalletPageFooter";
@@ -51,24 +47,22 @@ export default function WalletView() {
         >
           <Flex w="100%" justifyContent="space-between">
             <Flex alignItems={"center"} gap={3}>
-              <Avatar src={`/wallets/${Wallet.logo}`}/>
-              <Heading>{Wallet.name}</Heading>
+              <Avatar src={`/wallets/${Wallet.logo}`} size={{sm: "sm", md: "md", lg: "md"}}/>
+              <Heading fontSize={{sm: "1.5rem", lg: "2.5rem"}}>{Wallet.name}</Heading>
             </Flex>
-            <WalletPlatformsIcons platforms={Wallet.platforms} size={30} />
+            <WalletPlatformsIcons platforms={Wallet.platforms} size={25} />
           </Flex>
           <Flex>
             <Image
               src={`/wallets/${Wallet.urlBig}`}
-              layout="fixed"
-              width={400}
-              height={280}
+              objectFit='cover'
               alt="illustration"
             />
           </Flex>
         </Container>
         <WalletsBulletsRank specs={Wallet.specs} />
-        <Flex p={"5% 15%"} flexDir="column" gap={12}>
-          <Flex p={5} flexDir="column">
+        <Flex p={{sm: "5%, 0", lg: "5% 10%"}} flexDir="column" gap={{lg: 12}} fontSize={{lg: "1rem"}}>
+          <Flex p={8} flexDir="column">
             <Lorem text={Wallet.text}/>
             <Lorem text={Wallet.text}/>
           </Flex>

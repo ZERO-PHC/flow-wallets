@@ -32,6 +32,10 @@ const Nav = styled.nav`
   padding: 0rem 3rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    padding: 0rem .5rem;
+  }
 `;
 
 const SearchSection = styled.div`

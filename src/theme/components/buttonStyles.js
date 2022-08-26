@@ -64,7 +64,7 @@ export const ButtonStyles = {
         bg: mode("green.100", "purple.100")(props),
         p: 2,
         borderRadius: "50%",
-        h: "50px"
+        h: {sm: "40px", md: "40px",lg: "50px"}
     })
   },
 

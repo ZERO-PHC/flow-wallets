@@ -166,8 +166,8 @@ const customTheme = {
           border: "1px solid",
           borderColor: mode("green.200", "purple.200")(props),
           borderRadius: "50%",
-          w: "12px",
-          h: "12px",
+          w: {sm: "8px", md: "12px", lg: "12px"},
+          h: {sm: "8px", md: "12px", lg: "12px"},
           p: 0,
         }),
         bulletWhite: (props) => ({
@@ -176,8 +176,8 @@ const customTheme = {
           border: "1px solid",
           borderColor: mode("black.100", "white.100")(props),
           borderRadius: "50%",
-          w: "10px",
-          h: "10px",
+          w: {sm: "6px", md: "12px", lg: "12px"},
+          h: {sm: "6px", md: "12px", lg: "12px"},
           p: 0,
         }),
         walletPage: (props) => ({
