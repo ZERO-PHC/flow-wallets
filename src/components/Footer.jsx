@@ -64,21 +64,28 @@ export default function Footer() {
         </svg>
 
 
-        <Flex flexDirection={"column"} alignItems={"center"}>
-          <Text fontSize="sm" fontWeight="medium" color="white">
-            Want to list your wallet?
-          </Text>
-          <Link onClick={openTab} color={"#16FF99"} >Fill this form</Link>
-
-        </Flex >
-
         <Flex gap={4}>
           <Icon icon="akar-icons:github-fill" width="33" color="white" />
           <Icon icon="akar-icons:discord-fill" width="33" color="white" />
           <Icon icon="ri:question-answer-fill" width="33" color="white" />
         </Flex>
       </Flex>
+
+      <Flex flexDirection={"row"} alignItems={"center"} justifyContent={"space-between"}>
       <Text fontSize="20px" color="white">2022 Flow</Text>
+
+      <Flex alignItems={"center"} justifyContent={"space-between"}>
+      <Text fontSize="sm" fontWeight="medium" color="white">
+            Want to list your wallet?
+          </Text>
+          <div style={{width:"0.5rem"}}></div>
+          <Link fontSize="sm" onClick={openTab} color={"#16FF99"} >Fill this form</Link>
+        </Flex>
+
+       
+
+        </Flex >
+
     </Flex>
   );
 }
