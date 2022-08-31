@@ -93,3 +93,9 @@ footer {
   height: 10vh;
   background-color: black;
 }
+
+a {
+  color: white;
+  text-decoration: underline  ;
+  
+}

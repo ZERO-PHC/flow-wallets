@@ -1,9 +1,15 @@
 import React from "react";
-import { useColorMode, Text, Flex } from "@chakra-ui/react";
+import { useColorMode, Text, Flex, Container, Link } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 
 export default function Footer() {
   const { colorMode } = useColorMode();
+
+  // function that opens a new tab with the url
+  const openTab = (url) => {
+    window.open("https://forms.gle/QeukL8aUqpLPNqJr7", "_blank");
+  }
+
   return (
     <Flex flexDir="column" h="10rem" bg="black" px={12} py={2}>
       <Flex
@@ -56,6 +62,16 @@ export default function Footer() {
             fill={colorMode === "light" ? "black" : "white"}
           />
         </svg>
+
+
+        <Flex flexDirection={"column"} alignItems={"center"}>
+          <Text fontSize="sm" fontWeight="medium" color="white">
+            Want to list your wallet?
+          </Text>
+          <Link onClick={openTab} color={"#16FF99"} >Fill this form</Link>
+
+        </Flex >
+
         <Flex gap={4}>
           <Icon icon="akar-icons:github-fill" width="33" color="white" />
           <Icon icon="akar-icons:discord-fill" width="33" color="white" />
