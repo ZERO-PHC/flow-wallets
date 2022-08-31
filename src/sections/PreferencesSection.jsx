@@ -7,15 +7,15 @@ export default function PreferencesSection() {
   return (
     <Flex
       w={"100%"}
-      h="60vh"
       align="center"
       justify="center"
       flexDir={"column"}
+      mb={{sm: 3, md: 5, lg: 14}}
     >
-      <Heading mb={8} mr={"auto"}>
+      <Heading mb={8} mr={{sm: "inherit", md: "inherit", lg: "auto"}} fontSize={{sm: "1.4rem", md: "2rem", lg: "2.5rem"}}>
         Choose your wallet preferences
       </Heading>
-      <Grid gap={20} autoFlow="column dense">
+      <Flex gap={{sm: 10, md: 5, lg: 10}} flexWrap={{sm: "wrap", md: "wrap", lg: "nowrap"}}>
         <PreferenceCard
           id="non-custodial"
           title="Non-Custodial"
@@ -36,7 +36,7 @@ export default function PreferencesSection() {
           DisadvantageItem2="Prone to hacking"
           DisadvantageItem3="Low privacy"
         />
-      </Grid>
+      </Flex>
     </Flex>
   );
 }

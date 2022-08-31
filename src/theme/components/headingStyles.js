@@ -14,16 +14,16 @@ export const HeadingStyles = {
   // styles for different visual variants ("outline", "solid")
   variants: {
     primary: (props) => ({
-      fontSize: 26,
+      fontSize: {sm: 20, md: 20 ,lg:26},
       fontFamily: "blinkerExtraBold",
       textAlign: "center",
       marginLeft: "auto",
     }),
     secondary: (props) => ({
-      fontSize: 16,
+      fontSize: {sm: 14, md: 16 ,lg:16},
       fontFamily: "blinkerBold",
       textAlign: "center",
-      marginLeft: "auto",
+      marginLeft: {sm: "none", md: "none" ,lg:"auto"},
     }),
   },
 

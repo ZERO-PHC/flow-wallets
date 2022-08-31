@@ -50,6 +50,13 @@ export const ButtonStyles = {
         fontFamily: "Blinker SemiBold",
         fontSize: "14px",
     }),
+    device: (props) => ({
+      borderColor: mode("black.100", "white.100")(props),
+      border: "1px solid",
+      fontSize: "12px",
+      p: "5px 10px",
+      mt: 2
+    }),
     simpleBtn: (props) => ({
         color: mode("green.100", "purple.100")(props),
     }),
@@ -57,7 +64,7 @@ export const ButtonStyles = {
         bg: mode("green.100", "purple.100")(props),
         p: 2,
         borderRadius: "50%",
-        h: "50px"
+        h: {sm: "40px", md: "40px",lg: "50px"}
     })
   },
 

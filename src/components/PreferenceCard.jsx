@@ -14,7 +14,6 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
 
   return (
     <Container
-      // onClick={() => handleAction(target)}
       variant="preferenceCard"
     >
       <Flex justify={"center"} w={"100%"}>
@@ -24,21 +23,21 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
         </Flex>
         <Checkbox isChecked={WalletPreference === id} marginLeft="auto" onChange={(e) => handleSelection(e, id, WalletPreference, setWalletPreference)} />
       </Flex>
-      <Flex justifyContent={'space-evenly'} gap="50px">
+      <Flex justifyContent={'space-evenly'} gap="40px">
         <Flex flexDir={'column'}>
           <Heading variant="secondary">Advantages</Heading>
           <chakra.ul mt={1}>
-            <chakra.li>{AdvantageItem1}</chakra.li>
-            <chakra.li>{AdvantageItem2}</chakra.li>
-            <chakra.li>{AdvantageItem3}</chakra.li>
+            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{AdvantageItem1}</chakra.li>
+            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{AdvantageItem2}</chakra.li>
+            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{AdvantageItem3}</chakra.li>
           </chakra.ul>
         </Flex>
         <Flex flexDir={'column'}>
           <Heading variant="secondary">Disadvantages</Heading>
           <chakra.ul mt={1}>
-            <chakra.li>{DisadvantageItem1}</chakra.li>
-            <chakra.li>{DisadvantageItem2}</chakra.li>
-            <chakra.li>{DisadvantageItem3}</chakra.li>
+            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{DisadvantageItem1}</chakra.li>
+            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{DisadvantageItem2}</chakra.li>
+            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{DisadvantageItem3}</chakra.li>
           </chakra.ul>
         </Flex>
       </Flex>

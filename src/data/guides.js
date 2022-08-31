@@ -5,7 +5,6 @@ export const guides = [
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-0.png",
-    title: "What is a Wallet?",
     text: 
     [
       {

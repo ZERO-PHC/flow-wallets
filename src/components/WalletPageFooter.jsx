@@ -5,19 +5,19 @@ import Link from "next/link";
 
 export default function WalletPageFooter({ website }) {
   return (
-    <Flex justifyContent="space-between" p="50px 0" maxW={"1100px"} w="100%">
+    <Flex justifyContent="space-between" p="50px 20px" maxW={"1100px"} w="100%">
       <Flex gap={4} alignItems="center">
         <Link href="/">
           <Button onClick={() => {}} variant="guideBtn">
             <Icon icon="eva:arrow-ios-back-outline" width="30" />
           </Button>
         </Link>
-        <Text fontFamily="Blinker Bold" fontSize="25px">
+        <Text fontFamily="Blinker Bold" fontSize={{sm: "16px", md: "20px", lg: "25px"}}>
           Go Back
         </Text>
       </Flex>
       <Flex gap={4} alignItems="center">
-        <Text fontFamily="Blinker Bold" fontSize="25px">
+        <Text fontFamily="Blinker Bold" fontSize={{sm: "16px", md: "20px", lg: "25px"}}>
           See Website
         </Text>
         <a href={website} target="_blank" rel="noopener noreferrer">

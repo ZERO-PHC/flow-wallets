@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
-
 import { Container, Heading, Text, Flex } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { guides } from "../../data/guides";
 import StepsGuide from "../../components/StepsGuide";
 import GuidesFooter from "../../components/GuidesFooter";
+import { useMediaQuery } from "@chakra-ui/react"
 
 export default function Guide() {
+  const [isMobile] = useMediaQuery("(max-width: 900px)") 
   const router = useRouter();
   const { guideId } = router.query;
   const [guide, setGuide] = useState(null);
   let nextGuideId = parseInt(guideId) + 1;
-  console.log(nextGuideId)
-  console.log(guides.length)
 
   useEffect(() => {
    setGuide({
@@ -46,12 +45,11 @@ export default function Guide() {
       <Container p="5% 10%" variant="guideText" alignItems={"center"}>
         <Flex gap="80px" maxW={"1100px"}>
               <Flex
-                // style={{ display: i === parseInt(guideId) ? "block" : "none" }}
                 flexDir="column"
-                w="80%"
+                w={{lg: "80%"}}
                 
               >
-                <Heading w={"100%"} textAlign="left" pb="20px">{guide.title}</Heading>
+                <Heading w={"100%"} textAlign="left" pb="20px">{guide.name}</Heading>
                 {guide.text.map((text, i) => {
                   return (
                     <>
@@ -63,13 +61,14 @@ export default function Guide() {
                   )}
               )}
               </Flex>
-            
-          <StepsGuide guides={guides} id={guideId} />
+            {!isMobile &&
+            <StepsGuide guides={guides} id={guideId} />
+            }
         </Flex>
         <GuidesFooter
           next={nextGuideId == guides.length ? (() => router.push("/")) : (() => handleNav(true))}
           previous={nextGuideId != 1 ? (() => handleNav(false)) : (() => {})}
-          title={nextGuideId == guides.length ? "Choose your wallet" : guides[nextGuideId].title}
+          title={nextGuideId == guides.length ? "Choose your wallet" : guides[nextGuideId].name}
         />
       </Container>
     </>

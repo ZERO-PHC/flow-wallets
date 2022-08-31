@@ -18,7 +18,7 @@ export const WalletComponent = ({ handleAction, wallet }) => {
       display="flex"
       height={"auto"}
     >
-      <Flex justify="space-between" p={5}>
+      <Flex justify="space-between" p={{sm: "20px 10px", md: 5,lg: 5}} flexDir={{sm: "column", md: "row", lg: "row"}}>
         <WalletInfoComp name={wallet.name} platforms={wallet.platforms} url={wallet.url}/>
         <WalletSpecs wallet={wallet} view={"home"} />
       </Flex>

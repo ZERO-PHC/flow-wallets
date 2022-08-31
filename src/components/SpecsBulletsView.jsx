@@ -5,7 +5,7 @@ import Bullets from "./Bullets";
 export default function SpecsBulletsView({ rank, title }) {
   return (
     <Flex gap={3} w="fit-content" flexDir="column">
-      <Heading fontSize={"1.5rem"}>{title}</Heading>
+      <Heading fontSize={{sm: ".8rem", md: "1.2rem", lg: "1.5rem"}}>{title}</Heading>
       <Bullets variant="bullet" rank={rank} />
     </Flex>
   );

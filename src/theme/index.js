@@ -1,8 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import { ButtonStyles as Button } from "./components/buttonStyles";
-import { InputStyles as Input } from "./components/inputStyles";
-import { BoxStyles as Box } from "./components/boxStyles";
 import { HeadingStyles as Heading } from "./components/headingStyles";
 
 //include custom options here
@@ -17,6 +15,12 @@ const customTheme = {
         bg: mode("white", "black.200")(props),
       },
     }),
+  },
+  breakpoints: {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
   },
   variantTests: {
     w: "100px",
@@ -101,7 +105,7 @@ const customTheme = {
         },
       },
       defaultProps: {
-        size: "xg",
+        size: {sm: "lg", md: "xg", lg: "xg"},
       },
     },
     Container: {
@@ -124,7 +128,7 @@ const customTheme = {
           )(props),
         }),
         preferenceCard: (props) => ({
-          width: "480px",
+          width: { sm: "330px", md: "480px", lg: "480px"},
           height: "270px",
           padding: "20px 40px",
         }),
@@ -132,6 +136,7 @@ const customTheme = {
           bg: mode("black.200", "gray.600")(props),
           color: mode("white", "white")(props),
           fontFamily: "Blinker SemiBold",
+          fontSize: {sm: ".7rem", md: "1rem", lg: "1rem"},
         }),
         tableFeatures: (props) => ({
           bg: mode("white", "gray.500")(props),
@@ -141,8 +146,8 @@ const customTheme = {
           borderRadius: 0,
           boxShadow: 0,
           h: "auto",
-          w: "35%",
-          gap: "20px",
+          w: { md: "100%", lg: "35%" },
+          gap: {lg: "20px"},
         }),
         guideBg: (props) => ({
           bg: "linear-gradient(89.64deg, rgba(167, 255, 218, 0.4) 0.31%, rgba(99, 69, 237, 0.4) 172.01%)",
@@ -161,8 +166,8 @@ const customTheme = {
           border: "1px solid",
           borderColor: mode("green.200", "purple.200")(props),
           borderRadius: "50%",
-          w: "12px",
-          h: "12px",
+          w: {sm: "8px", md: "12px", lg: "12px"},
+          h: {sm: "8px", md: "12px", lg: "12px"},
           p: 0,
         }),
         bulletWhite: (props) => ({
@@ -171,8 +176,8 @@ const customTheme = {
           border: "1px solid",
           borderColor: mode("black.100", "white.100")(props),
           borderRadius: "50%",
-          w: "10px",
-          h: "10px",
+          w: {sm: "6px", md: "12px", lg: "12px"},
+          h: {sm: "6px", md: "12px", lg: "12px"},
           p: 0,
         }),
         walletPage: (props) => ({
