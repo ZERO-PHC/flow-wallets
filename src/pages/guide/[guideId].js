@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Heading, Text, Flex } from "@chakra-ui/react";
+import { Container, Heading, Text, Flex,Box } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { guides } from "../../data/guides";
@@ -12,20 +12,22 @@ export default function Guide() {
   const router = useRouter();
   const { guideId } = router.query;
   const [guide, setGuide] = useState(null);
-  let nextGuideId = parseInt(guideId) + 1;
+  // let nextGuideId = parseInt(guideId) + 1;
 
   useEffect(() => {
-   setGuide({
-      ...guides[guideId],
-   })
+    
+    const guide = guides.find(guide => guide.path === guideId)
+    console.log('guide', guide)
+   setGuide(guide)
   }, [guideId])
   
 
   const handleNav = (increment) => {
     increment
-      ? router.push(`/guide/${parseInt(guideId) + 1}`)
-      : router.push(`/guide/${parseInt(guideId) - 1}`);
+      ? router.push(guides[guide.id + 1].path)
+      : router.push(guides[guide.id - 1].path);
   };
+
 
   if (!guide) {
     return <div>Loading...</div>;
@@ -33,14 +35,18 @@ export default function Guide() {
 
   return (
     <>
-      <Container variant="guideBg">
-        <Image
-          src={`/assets/guides/guide-${guideId}.png`}
-          layout="fixed"
-          width={320}
-          height={320}
+      <Container h='40vh'  variant="guideBg">
+        <Box position={'relative'} h='9rem' width='14rem'  >
+          <Image
+          src={guide.src}
+          layout='fill'
+          // layout="fixed"
+          // width={320}
+          // height={320}
           alt="illustration"
         />
+        </Box>
+        
       </Container>
       <Container p="5% 10%" variant="guideText" alignItems={"center"}>
         <Flex gap="80px" maxW={"1100px"}>
@@ -62,13 +68,13 @@ export default function Guide() {
               )}
               </Flex>
             {!isMobile &&
-            <StepsGuide guides={guides} id={guideId} />
+            <StepsGuide guides={guides} id={guide.id} />
             }
         </Flex>
         <GuidesFooter
-          next={nextGuideId == guides.length ? (() => router.push("/")) : (() => handleNav(true))}
-          previous={nextGuideId != 1 ? (() => handleNav(false)) : (() => {})}
-          title={nextGuideId == guides.length ? "Choose your wallet" : guides[nextGuideId].name}
+          next={guide.id + 1  == guides.length ? (() => router.push("/")) : (() => handleNav(true))}
+          previous={guide.id !== 0 ? (() => handleNav(false)) : () => router.push("/")}
+          title={guide.id + 1  == guides.length ? "Choose your wallet" : guides[guide.id + 1].name}
         />
       </Container>
     </>

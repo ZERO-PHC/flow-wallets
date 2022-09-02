@@ -13,7 +13,7 @@ export default function OverviewCard({title, subtitle, btnText}) {
         <Text>{title}</Text>
         <Text display="flex">{subtitle}
         </Text>
-        <Button onClick={() => handleAction("guide", 0, router, setOpenSearch)}  variant="simpleBtn" p="4px">{btnText}</Button>
+        <Button onClick={() => handleAction("guide", 'what-is-a-wallet', router, setOpenSearch)}  variant="simpleBtn" p="4px">{btnText}</Button>
     </Container>
   )
 }

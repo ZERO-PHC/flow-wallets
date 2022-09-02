@@ -1,6 +1,7 @@
 export const guides = [
   {
-    id: "0",
+    id:0,
+    path: "what-is-a-wallet",
     name: "What is a Wallet?",
     selected: false,
     type: "guide",
@@ -34,7 +35,8 @@ export const guides = [
     ]
   },
   {
-    id: "1",
+    id:1,
+    path: "why-do-you-need-a-wallet",   
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-1.png",
@@ -74,7 +76,8 @@ export const guides = [
     ]
   },
   {
-    id: "2",
+    id:2,
+    path: "what-are-wallet-keys",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-2.png",
@@ -103,11 +106,12 @@ export const guides = [
       }
     ]
   },
-  {
-    id: "3",
+  { 
+    id:3,
+    path: "what-type-of-wallets-are-there",
     selected: false,
     type: "guide",
-    src: "/assets/guides/guide-4.png",
+    src: "/assets/guides/guide-3.png",
     name: "What types of wallets are there?",
     text: [
       {
@@ -170,10 +174,11 @@ export const guides = [
     ]
   },
   {
-    id: "4",
+    id:4,
+    path: "what-are-custodial-wallets",
     selected: false,
     type: "guide",
-    src: "/assets/guides/guide-5.png",
+    src: "/assets/guides/guide-4.png",
     name: "What are Custodial Wallets?",
     text: [
       {
@@ -236,7 +241,8 @@ export const guides = [
     ]
   },
   {
-    id: "5",
+    id:5,
+    path: "what-are-non-custodial-wallets",
     selected: false,
     type: "guide",
     src: "/assets/guides/guide-5.png",
