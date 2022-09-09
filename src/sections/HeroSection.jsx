@@ -4,6 +4,7 @@ import OverviewCard from "../components/OverviewCard";
 import { Image } from '@chakra-ui/react'
 // import Image from "next/image";
 
+
 export default function HeroSection() {
   return (
     <main style={{ position: "relative", width: "100%" }}>

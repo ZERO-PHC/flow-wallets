@@ -18,6 +18,7 @@ export const wallets = [
     text:[
       { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
     ],
+    path:" /wallet_dapper.glb",
     url: "dapperWallet.png",
     urlBig: "dapperBig.png",
     logo: "logo/dapper.png",
@@ -29,6 +30,8 @@ export const wallets = [
   },
   {
     id: 1,
+    path:" /wallet_lilico.glb",
+
     name: "Lilico",
     selected: false,
     type: "wallet",
@@ -57,6 +60,8 @@ export const wallets = [
   },
   {
     id: 2,
+    path:" /wallet_blocto.glb",
+
     name: "Blocto",
     selected: false,
     type: "wallet",
@@ -87,6 +92,8 @@ export const wallets = [
   {
     id: 3,
     name: "Ledger",
+    path:" /wallet_ledger.glb",
+
     selected: false,
     type: "wallet",
     categories:[ "security","all"],
@@ -115,6 +122,8 @@ export const wallets = [
   {
     id: 4,
     name: "Finoa",
+    path:" /wallet_finoa.glb",
+
     selected: false,
     type: "wallet",
     categories:[ "anon","all"],

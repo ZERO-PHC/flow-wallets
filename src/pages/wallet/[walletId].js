@@ -9,6 +9,7 @@ import WalletPlatformsIcons from "../../components/WalletPlatformsIcons";
 import WalletsBulletsRank from "../../sections/WalletsBulletsRank";
 import SimilarWalletsSection from "../../sections/SimilarWalletsSection";
 import WalletPageFooter from "../../components/WalletPageFooter";
+import WalletWrapper from "../../components/3dWalletWrapper";
 
 export default function WalletView() {
   const router = useRouter();
@@ -52,12 +53,14 @@ export default function WalletView() {
             </Flex>
             <WalletPlatformsIcons platforms={Wallet.platforms} size={25} />
           </Flex>
+          {/* height */}
           <Flex>
-            <Image
+            {/* <Image
               src={`/wallets/${Wallet.urlBig}`}
               objectFit='cover'
               alt="illustration"
-            />
+            /> */}
+            <WalletWrapper path={Wallet.path} wallet={Wallet} />
           </Flex>
         </Container>
         <WalletsBulletsRank specs={Wallet.specs} />

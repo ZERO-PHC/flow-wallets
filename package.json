@@ -12,11 +12,17 @@
     "@chakra-ui/react": "2.2.6",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@google/model-viewer": "1.12.1",
+    "@react-three/drei": "9.28.2",
+    "@react-three/fiber": "8.7.2",
     "framer-motion": "^6",
     "next": "12.2.5",
+    "next-videos": "1.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^5.3.5"
+    "react-intersection-observer": "9.4.0",
+    "styled-components": "^5.3.5",
+    "three": "0.144.0"
   },
   "devDependencies": {
     "@iconify/react": "^3.2.2",
