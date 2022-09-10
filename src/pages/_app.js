@@ -7,7 +7,7 @@ import theme from "../theme";
 import DialogProvider from "../providers/DialogProvider";
 import TableProvider from "../providers/table/TableProvider";
 import SearchDialogComponent from "../components/SearchDialogComponent";
-
+import Head from "next/head";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
@@ -17,6 +17,10 @@ function MyApp({ Component, pageProps }) {
       <DialogProvider>
         <TableProvider>
           <Layout>
+            <Head>
+              <title>Flow Wallets - Find your wallet</title>
+              <meta property="og:title" content="Flow Wallets - Find your wallet" key="title" />
+            </Head>
             <SearchDialogComponent />
             <Component {...pageProps} />
           </Layout>

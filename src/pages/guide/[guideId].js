@@ -36,7 +36,7 @@ export default function Guide() {
   return (
     <>
       <Container h='40vh'  variant="guideBg">
-        <Box position={'relative'} h='9rem' width='14rem'  >
+        <Box position={'relative'} h='14rem' width='14rem'  >
           <Image
           src={guide.src}
           layout='fill'
