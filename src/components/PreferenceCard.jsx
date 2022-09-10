@@ -41,7 +41,7 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
           </chakra.ul>
         </Flex>
       </Flex>
-      <Button onClick={() => handleAction("guide", id === "custodial" ? 3 : 4, router, setOpenSearch)}
+      <Button onClick={() => handleAction("guide", id === "custodial" ? "what-are-custodial-wallets" : "what-are-non-custodial-wallets", router, setOpenSearch)}
         variant="bottomLine">Learn More</Button>
     </Container>
   );

@@ -1,6 +1,7 @@
 export const wallets = [
   {
-    id: 0,
+    // id: 0,
+    id: 'dapper',
     name: "Dapper",
     selected: false,
     type: "wallet",
@@ -29,7 +30,7 @@ export const wallets = [
     ]
   },
   {
-    id: 1,
+    id: 'lilico',
     path:"/wallet_lilico.glb",
 
     name: "Lilico",
@@ -59,7 +60,7 @@ export const wallets = [
     ]
   },
   {
-    id: 2,
+    id: 'blocto',
     path:"/wallet_blocto.glb",
 
     name: "Blocto",
@@ -90,7 +91,7 @@ export const wallets = [
     },
     
   {
-    id: 3,
+    id: 'ledger',
     name: "Ledger",
     path:"/wallet_ledger.glb",
 
@@ -120,7 +121,7 @@ export const wallets = [
     ]
   },
   {
-    id: 4,
+    id: 'finoa',
     name: "Finoa",
     path:"/wallet_finoa.glb",
 

@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { ColorModeScript } from "@chakra-ui/react";
+import React,{ useEffect } from 'react';
 
 import Layout from "../components/Layout";
 import theme from "../theme";
@@ -11,6 +12,15 @@ import Head from "next/head";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+            const loader = document.getElementById('globalLoader');
+        if (loader)
+            loader.style.display = 'none';
+    }
+}, []);
+
   return (
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />

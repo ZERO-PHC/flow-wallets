@@ -19,10 +19,10 @@ export default function WalletView() {
   const [Wallet, setWallet] = useState(null);
 
   useEffect(() => {
+    const wallet = wallets.find((wallet) => wallet.id === walletId);
+
     walletId &&
-      setWallet({
-        ...wallets[walletId],
-      });
+      setWallet(wallet);
   }, [walletId]);
 
 
