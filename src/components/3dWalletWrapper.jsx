@@ -6,7 +6,7 @@ const WalletWrapper = ({path, posterPath}) => {
     const group = useRef()
     return (
         <>
-        <div style={{height:'10rem'}}>
+        <div style={{height:'14rem'}}>
             <model-viewer
             ref={group}
             src={path}
@@ -14,6 +14,7 @@ const WalletWrapper = ({path, posterPath}) => {
             shadow-intensity="0"
             disable-zoom
             // poster={posterPath}
+            style={{height: '250px'}}
             camera-orbit="calc(-1.2rad + env(window-scroll-y) * 1rad) calc(90deg + env(window-scroll-y) * 1deg) "
             >
             </model-viewer>
