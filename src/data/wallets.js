@@ -1,13 +1,12 @@
 export const wallets = [
   {
-    // id: 0,
     id: 'dapper',
     name: "Dapper",
     selected: false,
     type: "wallet",
     categories:[ "ease","all"],
     custodial: true,
-    similarWallets: [2, 3],
+    similarWallets: ["blocto", "finoa"],
     specs: {
       crypto: "High",
       security: "High",
@@ -38,7 +37,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "security","all"],
     custodial: false,
-    similarWallets: [1, 3],
+    similarWallets: ["ledger"],
     specs: {
       crypto: "Low",
       security: "Medium",
@@ -68,7 +67,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "ease","all"],
     custodial: true,
-    similarWallets: [0, 4],
+    similarWallets: ["dapper", "finoa"],
     specs: {
       crypto: "High",
       security: "Medium",
@@ -99,7 +98,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "security","all"],
     custodial: false,
-    similarWallets: [1, 2],
+    similarWallets: ["lilico"],
     specs: {
       crypto: "Low",
       security: "High",
@@ -129,7 +128,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "anon","all"],
     custodial: true,
-    similarWallets: [0, 3],
+    similarWallets: ["dapper", "blocto"],
     specs: {
       crypto: "High",
       security: "High",
