@@ -948,7 +948,7 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
-"@google/model-viewer@^1.11.1":
+"@google/model-viewer@1.12.1":
   "integrity" "sha512-GOf/By81rbxSmwWRVxBtlY5b3050msJ+BDWqonPj7M0/I7rNS/vVNjbLxTofbGjZObS3n0ELHj8TZ47UtkZbtg=="
   "resolved" "https://registry.npmjs.org/@google/model-viewer/-/model-viewer-1.12.1.tgz"
   "version" "1.12.1"

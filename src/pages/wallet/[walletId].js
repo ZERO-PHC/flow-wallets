@@ -59,7 +59,7 @@ export default function WalletView() {
               objectFit='cover'
               alt="illustration"
             /> */}
-            <Model path={Wallet.path} wallet={Wallet} />
+            <Model path={Wallet.path} posterPath={Wallet.urlBig} wallet={Wallet} />
           </Flex>
         </Container>
         <WalletsBulletsRank specs={Wallet.specs} />

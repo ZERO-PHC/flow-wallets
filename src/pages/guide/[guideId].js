@@ -40,9 +40,6 @@ export default function Guide() {
           <Image
           src={guide.src}
           layout='fill'
-          // layout="fixed"
-          // width={320}
-          // height={320}
           alt="illustration"
         />
         </Box>

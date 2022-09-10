@@ -1,7 +1,7 @@
 import '@google/model-viewer'
 import React, {useRef} from "react";
 
-const WalletWrapper = ({path}) => {
+const WalletWrapper = ({path, posterPath}) => {
 
     const group = useRef()
     return (
@@ -11,10 +11,10 @@ const WalletWrapper = ({path}) => {
             ref={group}
             src={path}
             alt="wallet"
-            shadow-intensity="1"
-            camera-controls
+            shadow-intensity="0"
             disable-zoom
-            camera-orbit="calc(-6.2rad + env(window-scroll-y) * 15rad) calc(90deg + env(window-scroll-y) * 30deg) "
+            // poster={posterPath}
+            camera-orbit="calc(-1.2rad + env(window-scroll-y) * 1rad) calc(90deg + env(window-scroll-y) * 1deg) "
             >
             </model-viewer>
         </div>

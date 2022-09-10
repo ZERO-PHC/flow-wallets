@@ -20,7 +20,7 @@ export const wallets = [
     ],
     path:"/wallet_dapper.glb",
     url: "dapperWallet.png",
-    urlBig: "dapperBig.png",
+    urlBig: "/wallets/dapperBig.png",
     logo: "logo/dapper.png",
     linearBg: "linear-gradient(180deg, rgba(132, 34, 224, 0.56) -93.6%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://meetdapper.com/",
@@ -50,7 +50,7 @@ export const wallets = [
       { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
     ],
     url: "lilicoWallet.png",
-    urlBig: "lilicoBig.png",
+    urlBig: "/wallets/lilicoBig.png",
     logo: "logo/lilico.png",
     linearBg: "linear-gradient(180deg, #F1C7A1 -24.16%, rgba(173, 181, 184, 0) 103.6%)",
     website: "https://lilico.app/",
@@ -80,7 +80,7 @@ export const wallets = [
       { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
     ],
       url: "bloctoWallet.png",
-      urlBig: "bloctoBig.png",
+      urlBig: "/wallets/bloctoBig.png",
       logo: "logo/blocto.png",
       linearBg: "linear-gradient(174.59deg, #449AFD -120.11%, rgba(173, 181, 184, 0) 98.96%);",
       website: "https://blocto.app/",
@@ -111,7 +111,7 @@ export const wallets = [
       { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
     ],
     url: "ledgerWallet.png",
-    urlBig: "ledgerBig.png",
+    urlBig: "/wallets/ledgerBig.png",
     logo: "logo/ledger.png",
     linearBg: "linear-gradient(180deg, #F8F3EF -82.81%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://ledger.com/",
@@ -141,6 +141,7 @@ export const wallets = [
       { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
     ],
     url: "finoa.png",
+    urlBig: "/wallets/finoa.png",
     logo: "logo/finoa.png",
     linearBg: "linear-gradient(180deg, #32C7A1 -82.81%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://www.finoa.io/custody/",
