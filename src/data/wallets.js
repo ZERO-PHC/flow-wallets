@@ -140,7 +140,7 @@ export const wallets = [
     text:[
       { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
     ],
-    url: "lilicoWallet.png",
+    url: "finoa.png",
     logo: "logo/finoa.png",
     linearBg: "linear-gradient(180deg, #32C7A1 -82.81%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://www.finoa.io/custody/",
