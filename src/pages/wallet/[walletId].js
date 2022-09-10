@@ -4,12 +4,14 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 import { Image } from '@chakra-ui/react'
 import { wallets } from "../../data/wallets";
-import { Avatar, Container, Flex, Heading, Divider } from "@chakra-ui/react";
+import { Avatar, Container, Flex, Heading } from "@chakra-ui/react";
 import WalletPlatformsIcons from "../../components/WalletPlatformsIcons";
 import WalletsBulletsRank from "../../sections/WalletsBulletsRank";
 import SimilarWalletsSection from "../../sections/SimilarWalletsSection";
 import WalletPageFooter from "../../components/WalletPageFooter";
-import WalletWrapper from "../../components/3dWalletWrapper";
+import dynamic from 'next/dynamic'
+
+const Model = dynamic(() => import('../../components/3dWalletWrapper'), {ssr: false})
 
 export default function WalletView() {
   const router = useRouter();
@@ -23,9 +25,6 @@ export default function WalletView() {
       });
   }, [walletId]);
 
-  const handleNav = (increment, url) => {
-    !increment ? router.back() : window.open(url, "_blank");
-  };
 
   const Lorem = ({ text }) => {
     // return a long string of -container
@@ -60,7 +59,7 @@ export default function WalletView() {
               objectFit='cover'
               alt="illustration"
             /> */}
-            <WalletWrapper path={Wallet.path} wallet={Wallet} />
+            <Model path={Wallet.path} wallet={Wallet} />
           </Flex>
         </Container>
         <WalletsBulletsRank specs={Wallet.specs} />
