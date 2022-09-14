@@ -19,10 +19,10 @@ export default function TableProvider({ children }) {
   const [tabIndex, setTabIndex] = useState(0);
   
 
-
   useEffect(() => {
     const newWallets = resolveWallets(WalletPreference, tabIndex, SelectedFeatures);
     setWallets(newWallets);
+    console.log("wallets preference", WalletPreference)
   }, [WalletPreference, SelectedFeatures, tabIndex]);
 
 
@@ -47,5 +47,3 @@ export default function TableProvider({ children }) {
     </>
   )
 }
-
-

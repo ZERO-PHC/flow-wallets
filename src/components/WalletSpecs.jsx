@@ -38,7 +38,7 @@ export default function WalletSpecs({ wallet, view }) {
       />
       <Flex flexDir="column" gap={1}>
         <Text alignSelf={"end"} fontSize={{sm: "14px", md: "16px", lg: "16px"}}>Anonimity</Text>
-        <Heading variant="primary" fontSize={{sm: "18px", md: "20px", lg: "20px"}}>Medium</Heading>
+        <Heading variant="primary" fontSize={{sm: "18px", md: "20px", lg: "20px"}}>{wallet.specs.anonymity}</Heading>
       </Flex>
       <Divider
         w="2px"
@@ -50,7 +50,7 @@ export default function WalletSpecs({ wallet, view }) {
       />
       <Flex flexDir="column" gap={1}>
         <Text alignSelf={"end"} fontSize={{sm: "14px", md: "16px", lg: "16px"}}>Ease of use</Text>
-        <Heading variant="primary" fontSize={{sm: "18px", md: "20px", lg: "20px"}}>Medium</Heading>
+        <Heading variant="primary" fontSize={{sm: "18px", md: "20px", lg: "20px"}}>{wallet.specs.usability}</Heading>
       </Flex>
     </Flex>
   );

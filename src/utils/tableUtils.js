@@ -59,7 +59,7 @@ const isCustodial = (wallet,tab) =>
   wallet.categories.includes(tab) && wallet.custodial ? true : false;
 
 const isNotCustodial = (wallet,tab) =>
-  wallet.categories.includes(tab) && !wallet.custodial ? true : false;
+  wallet.categories.includes(tab) && wallet.nonCustodial ? true : false;
 
 
 export const handleFeatureSelection = (feature, SelectedFeatures, setSelectedFeatures) => {

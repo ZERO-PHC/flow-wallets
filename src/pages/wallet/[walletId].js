@@ -66,7 +66,6 @@ export default function WalletView() {
         <Flex p={{sm: "5%, 0", lg: "5% 10%"}} flexDir="column" gap={{lg: 12}} fontSize={{lg: "1rem"}}>
           <Flex p={8} flexDir="column">
             <Lorem text={Wallet.text}/>
-            <Lorem text={Wallet.text}/>
           </Flex>
           <SimilarWalletsSection ids={Wallet.similarWallets}/>
         </Flex>

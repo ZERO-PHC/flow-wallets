@@ -4,19 +4,19 @@ export const wallets = [
     name: "Dapper",
     selected: false,
     type: "wallet",
-    categories:[ "ease","all"],
+    categories:[ "ease","all", "security"],
     custodial: true,
     similarWallets: ["blocto", "finoa"],
     specs: {
-      crypto: "High",
+      crypto: "Medium",
       security: "High",
       anonymity: "Low",
       swap: "Low",
-      usability: "Medium",
+      usability: "High",
     },
     platforms: ["web"],
     text:[
-      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+      { paragraph: "Dapper is the gateway introducing the next billion people to the benefits of blockchain and the open Metaverse. With easy-to-use deposit and withdrawal options, streamlined sign up, and advanced security and fraud protection, Dapper offers the robust infrastructure needed to fuel the growth of your product."}
     ],
     path:"/wallet_dapper.glb",
     url: "dapperWallet.png",
@@ -25,7 +25,9 @@ export const wallets = [
     linearBg: "linear-gradient(180deg, rgba(132, 34, 224, 0.56) -93.6%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://meetdapper.com/",
     features: [
-      "fiat-token"
+      "fiat-token",
+      "email-auth",
+      "nft-support"
     ]
   },
   {
@@ -35,19 +37,19 @@ export const wallets = [
     name: "Lilico",
     selected: false,
     type: "wallet",
-    categories:[ "security","all"],
-    custodial: false,
-    similarWallets: ["ledger"],
+    categories:[ "security", "anon", "all"],
+    nonCustodial: true,
+    similarWallets: [1, 3],
     specs: {
       crypto: "Low",
-      security: "Medium",
+      security: "High",
       anonymity: "High",
       swap: "Low",
-      usability: "High",
+      usability: "Medium",
     },
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
     text:[
-      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+      { paragraph: "Lilico is not your ordinary wallet. It is a playground for all your assets related to gaming, fashion and art that transcends the current web3 experience. Lilico lives in your devices and is playing #onFlow, home to the most creative NFT and crypto projects. Built for new users as well as the more experienced players, Lilico brings more fun to the web3 experience while letting you take total control of the security of your assets. Some advantages of using it are: Fully on your control, more fun, better UX."}
     ],
     url: "lilicoWallet.png",
     urlBig: "/wallets/lilicoBig.png",
@@ -65,19 +67,20 @@ export const wallets = [
     name: "Blocto",
     selected: false,
     type: "wallet",
-    categories:[ "ease","all"],
+    categories:[ "ease", "security", "all"],
     custodial: true,
-    similarWallets: ["dapper", "finoa"],
+    nonCustodial: true,
+    similarWallets: [0, 4],
     specs: {
       crypto: "High",
-      security: "Medium",
-      anonymity: "Medium",
+      security: "High",
+      anonymity: "Low",
       swap: "High",
       usability: "High",
     },
     platforms: ["web", "playstore", "appstore"],
     text:[
-      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+      { paragraph: "Blocto’s cross-device SDK solutions and seamless UI/UX experiences with NFTs are just too friendly for devs/projects! Some advantages of using Blocto Wallet are: 1. User-friendly onboarding experience,  Email login, Universal Gas fee, Cross device experience (SDK - APP)"}
     ],
       url: "bloctoWallet.png",
       urlBig: "/wallets/bloctoBig.png",
@@ -85,7 +88,9 @@ export const wallets = [
       linearBg: "linear-gradient(174.59deg, #449AFD -120.11%, rgba(173, 181, 184, 0) 98.96%);",
       website: "https://blocto.app/",
       features: [
-        "email-auth"
+        "email-auth",
+        "staking",
+        "nft-support"
       ]
     },
     
@@ -97,8 +102,8 @@ export const wallets = [
     selected: false,
     type: "wallet",
     categories:[ "security","all"],
-    custodial: false,
-    similarWallets: ["lilico"],
+    nonCustodial: true,
+    similarWallets: [1, 2],
     specs: {
       crypto: "Low",
       security: "High",
@@ -108,7 +113,7 @@ export const wallets = [
     },
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
     text:[
-      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+      { paragraph: "Whether you’re looking to keep your crypto safe for the future or manage it on a daily basis, we’ve got the right product for you."}
     ],
     url: "ledgerWallet.png",
     urlBig: "/wallets/ledgerBig.png",
@@ -126,19 +131,19 @@ export const wallets = [
 
     selected: false,
     type: "wallet",
-    categories:[ "anon","all"],
+    categories:["all"],
     custodial: true,
     similarWallets: ["dapper", "blocto"],
     specs: {
       crypto: "High",
       security: "High",
-      anonymity: "High",
-      swap: "Low",
-      usability: "High",
+      anonymity: "Low",
+      swap: "High",
+      usability: "Medium",
     },
     platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
     text:[
-      { paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisi eget consectetur consectetur, nisi nisi consectetur nisi, egetconsectetur nisi nisi eget consectetur consectetur, nisi nisi consectetur nisi, eget consectetur nisi nisi eget consectetur consectetur consectetur nisi, eget consectetur nisi nisi egetconsectetur consectetur, nisi nisi consectetur nisi, eget consecteturnisi nisi eget consectetur consectetur"}
+      { paragraph: "The curated crypto-asset platform for institutions. Finoa it's a simple and secure institutional crypto custody and staking solutions across a range of carefully selected assets."}
     ],
     url: "finoa.png",
     urlBig: "/wallets/finoa.png",
@@ -146,7 +151,7 @@ export const wallets = [
     linearBg: "linear-gradient(180deg, #32C7A1 -82.81%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://www.finoa.io/custody/",
     features: [
-      "staking"
+      
     ]
   },
 ];
