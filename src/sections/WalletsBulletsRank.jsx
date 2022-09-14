@@ -21,7 +21,7 @@ export default function WalletsBulletsRank({specs}) {
         bg={"white.100"}
         borderRadius={3}
       />
-      <SpecsBulletsView title="Swap" rank={specs.anonymity} />
+      <SpecsBulletsView title="Anonymity" rank={specs.anonymity} />
       <Divider
         w="1px"
         h={{sm: "40px", md: "55px", lg: "63px"}}

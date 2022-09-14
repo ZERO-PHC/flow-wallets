@@ -72,7 +72,7 @@ export const wallets = [
     nonCustodial: true,
     similarWallets: ["dapper", "lilico"],
     specs: {
-      crypto: "High",
+      crypto: "Medium",
       security: "High",
       anonymity: "Low",
       swap: "High",
