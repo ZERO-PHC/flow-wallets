@@ -39,7 +39,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "security", "anon", "all"],
     nonCustodial: true,
-    similarWallets: [1, 3],
+    similarWallets: ["ledger"],
     specs: {
       crypto: "Low",
       security: "High",
@@ -70,7 +70,7 @@ export const wallets = [
     categories:[ "ease", "security", "all"],
     custodial: true,
     nonCustodial: true,
-    similarWallets: [0, 4],
+    similarWallets: ["dapper", "lilico"],
     specs: {
       crypto: "High",
       security: "High",
@@ -103,7 +103,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "security","all"],
     nonCustodial: true,
-    similarWallets: [1, 2],
+    similarWallets: ["lilico"],
     specs: {
       crypto: "Low",
       security: "High",
