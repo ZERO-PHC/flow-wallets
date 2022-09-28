@@ -37,7 +37,7 @@ export default function WalletSpecs({ wallet, view }) {
         border="none"
       />
       <Flex flexDir="column" gap={1}>
-        <Text alignSelf={"end"} fontSize={{sm: "14px", md: "16px", lg: "16px"}}>Anonimity</Text>
+        <Text alignSelf={"end"} fontSize={{sm: "14px", md: "16px", lg: "16px"}}>Anonymity</Text>
         <Heading variant="primary" fontSize={{sm: "18px", md: "20px", lg: "20px"}}>{wallet.specs.anonymity}</Heading>
       </Flex>
       <Divider
