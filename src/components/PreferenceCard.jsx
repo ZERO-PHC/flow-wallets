@@ -10,7 +10,7 @@ import { useDialog } from "../providers/DialogProvider";
 export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageItem2, AdvantageItem3, DisadvantageItem1, DisadvantageItem2, DisadvantageItem3 }) {
   const router = useRouter()
   const { WalletPreference, setWalletPreference } = useTable()
-  const { setOpenSearch  } = useDialog()
+  const { setOpenSearch } = useDialog()
 
   return (
     <Container
@@ -18,8 +18,8 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
     >
       <Flex justify={"center"} w={"100%"}>
         <Flex flexDir="column" marginLeft="auto">
-        <Heading variant="primary"> {title} </Heading>
-        <Divider variant="bottomDetail" h="3px" w="50px"/>
+          <Heading variant="primary"> {title} </Heading>
+          <Divider variant="bottomDetail" h="3px" w="50px" />
         </Flex>
         <Checkbox isChecked={WalletPreference === id} marginLeft="auto" onChange={(e) => handleSelection(e, id, WalletPreference, setWalletPreference)} />
       </Flex>
@@ -27,21 +27,21 @@ export default function PreferenceCard({ title, id, AdvantageItem1, AdvantageIte
         <Flex flexDir={'column'}>
           <Heading variant="secondary">Advantages</Heading>
           <chakra.ul mt={1}>
-            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{AdvantageItem1}</chakra.li>
-            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{AdvantageItem2}</chakra.li>
-            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{AdvantageItem3}</chakra.li>
+            <chakra.li fontSize={{ sm: 14, md: 16, lg: 16 }}>{AdvantageItem1}</chakra.li>
+            <chakra.li fontSize={{ sm: 14, md: 16, lg: 16 }}>{AdvantageItem2}</chakra.li>
+            <chakra.li fontSize={{ sm: 14, md: 16, lg: 16 }}>{AdvantageItem3}</chakra.li>
           </chakra.ul>
         </Flex>
         <Flex flexDir={'column'}>
           <Heading variant="secondary">Disadvantages</Heading>
           <chakra.ul mt={1}>
-            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{DisadvantageItem1}</chakra.li>
-            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{DisadvantageItem2}</chakra.li>
-            <chakra.li fontSize={{sm: 14, md: 16 ,lg:16}}>{DisadvantageItem3}</chakra.li>
+            <chakra.li fontSize={{ sm: 14, md: 16, lg: 16 }}>{DisadvantageItem1}</chakra.li>
+            <chakra.li fontSize={{ sm: 14, md: 16, lg: 16 }}>{DisadvantageItem2}</chakra.li>
+            <chakra.li fontSize={{ sm: 14, md: 16, lg: 16 }}>{DisadvantageItem3}</chakra.li>
           </chakra.ul>
         </Flex>
       </Flex>
-      <Button onClick={() => handleAction("guide", id === "custodial" ? "what-are-custodial-wallets" : "what-are-non-custodial-wallets", router, setOpenSearch)}
+      <Button onClick={() => handleAction("guide", "_", router, setOpenSearch, "_", "_", id === "custodial" ? "what-are-custodial-wallets" : "what-are-non-custodial-wallets")}
         variant="bottomLine">Learn More</Button>
     </Container>
   );
