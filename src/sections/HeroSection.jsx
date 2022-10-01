@@ -31,11 +31,11 @@ export default function HeroSection() {
           subtitle="Here is an overview to get you started."
           btnText="Flow User"
         />
-        <OverviewCard
+        {/* <OverviewCard
           title="Are you a new Flow Developer?"
           subtitle="Here is an overview to get you started."
           btnText="Flow Developer"
-        />
+        /> */}
       </Flex>
     </main>
   );

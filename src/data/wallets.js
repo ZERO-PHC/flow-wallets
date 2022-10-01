@@ -6,7 +6,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "ease","all", "security"],
     custodial: true,
-    similarWallets: ["blocto", "finoa"],
+    similarWallets: ["blocto", "finoa", "lilico"],
     specs: {
       crypto: "Medium",
       security: "High",
@@ -39,7 +39,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "security", "anon", "all"],
     nonCustodial: true,
-    similarWallets: ["ledger"],
+    similarWallets: ["ledger", "blocto"],
     specs: {
       crypto: "Low",
       security: "High",
@@ -57,6 +57,7 @@ export const wallets = [
     linearBg: "linear-gradient(180deg, #F1C7A1 -24.16%, rgba(173, 181, 184, 0) 103.6%)",
     website: "https://lilico.app/",
     features: [
+      "email-auth",
       "nft-support"
     ]
   },
