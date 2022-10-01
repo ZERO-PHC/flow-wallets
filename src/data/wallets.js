@@ -138,48 +138,48 @@ export const wallets = [
       "hardware-support"
     ]
   },
-  {
-    id: 'nufi',
-    path:"/wallet_lilico.glb",
+  // {
+  //   id: 'nufi',
+  //   path:"/wallet_lilico.glb",
 
-    name: "NuFi",
-    selected: false,
-    type: "wallet",
-    categories:[ "security", "anon", "all"],
-    nonCustodial: true,
-    similarWallets: ["ledger", "blocto"],
-    specs: {
-      crypto: "Low",
-      security: "High",
-      anonymity: "High",
-      swap: "Low",
-      usability: "High",
-    },
-    platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
-    text:[
-      { paragraph: `
-      NuFi is a non-custodial Web3 wallet to manage Flow tokens and NFTs, stake and earn FLOW, and connect to Dapps to buy/sell Flow NFTs, trade Flow tokens, discover DeFi and more.
-      `},
-      {paragraph: "Wallet Features:"},
-    { paragraph: "• Non-custodial: no middleman or restrictions, and full asset ownership",},
-    {paragraph: "• Stake FLOW to earn FLOW while you sleep"},
-    {paragraph: "• Connect to Dapps like NFT marketplaces and decentralized exchanges"},
-    {paragraph: "• Visually manage NFTs with an integrated NFT gallery"},
-    {paragraph: "• Hardware wallet compatible: manage your Ledger's Flow accounts"},
-    {paragraph: "• Buy and sell FLOW using card or bank transfer, and trade cross-chain"},
-    {paragraph: "• Multi-chain: use NuFi to manage Flow, Cardano and Solana assets side by side"},
-    ],
-    url: "lilicoWallet.png",
-    urlBig: "/wallets/lilicoBig.png",
-    logo: "logo/lilico.png",
-    linearBg: "linear-gradient(180deg, #F1C7A1 -24.16%, rgba(173, 181, 184, 0) 103.6%)",
-    website: "https://lilico.app/",
-    features: [
-      "email-auth",
-      "staking",
-      "nft-support"
-    ]
-  },
+  //   name: "NuFi",
+  //   selected: false,
+  //   type: "wallet",
+  //   categories:[ "security", "anon", "all"],
+  //   nonCustodial: true,
+  //   similarWallets: ["ledger", "blocto"],
+  //   specs: {
+  //     crypto: "Low",
+  //     security: "High",
+  //     anonymity: "High",
+  //     swap: "Low",
+  //     usability: "High",
+  //   },
+  //   platforms: ["web", "chrome", "playstore", "appstore", "hardware"],
+  //   text:[
+  //     { paragraph: `
+  //     NuFi is a non-custodial Web3 wallet to manage Flow tokens and NFTs, stake and earn FLOW, and connect to Dapps to buy/sell Flow NFTs, trade Flow tokens, discover DeFi and more.
+  //     `},
+  //     {paragraph: "Wallet Features:"},
+  //   { paragraph: "• Non-custodial: no middleman or restrictions, and full asset ownership",},
+  //   {paragraph: "• Stake FLOW to earn FLOW while you sleep"},
+  //   {paragraph: "• Connect to Dapps like NFT marketplaces and decentralized exchanges"},
+  //   {paragraph: "• Visually manage NFTs with an integrated NFT gallery"},
+  //   {paragraph: "• Hardware wallet compatible: manage your Ledger's Flow accounts"},
+  //   {paragraph: "• Buy and sell FLOW using card or bank transfer, and trade cross-chain"},
+  //   {paragraph: "• Multi-chain: use NuFi to manage Flow, Cardano and Solana assets side by side"},
+  //   ],
+  //   url: "lilicoWallet.png",
+  //   urlBig: "/wallets/lilicoBig.png",
+  //   logo: "logo/lilico.png",
+  //   linearBg: "linear-gradient(180deg, #F1C7A1 -24.16%, rgba(173, 181, 184, 0) 103.6%)",
+  //   website: "https://lilico.app/",
+  //   features: [
+  //     "email-auth",
+  //     "staking",
+  //     "nft-support"
+  //   ]
+  // },
   {
     id: 'finoa',
     name: "Finoa",
