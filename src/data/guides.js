@@ -59,7 +59,7 @@ export const guides = [
       },
       {
         title: "Receiving mining/staking reward",
-        paragraph: "It takes a collaboration of nodes on a peer-to-peer network through a consensus protocol to update transactions on the blockchain’s shared ledger. If you have a node that participates in maintaining the shared ledger, you will receive a reward, which can only go to a wallet that is part of the node.  "
+        paragraph: "It takes a collaboration of nodes on a peer-to-peer network through a consensus protocol to update transactions on the blockchain’s shared ledger. If you have a node that participates in maintaining the shared ledger, you will receive a reward, which can only go to a wallet that is part of the node."
       },
       {
         title: "Manage NFTs",

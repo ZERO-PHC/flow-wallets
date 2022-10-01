@@ -9,13 +9,7 @@ export const features = [
       },
       {
         paragraph:
-          "With this feature you access your wallet with just one click.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
+          "With this feature you access your wallet with just one click, making your login process much easier and smoother.",
       },
       {
         paragraph:
@@ -32,21 +26,11 @@ export const features = [
     text: [
       {
         paragraph:
-          "Wallets that have this feature provide to the user a way to login and signUp through their email",
+          "Wallets that have this feature provide to the user a special electronic device designed to help them to access and use their balances on the blockchain.",
       },
       {
         paragraph:
-          "With this feature you access your wallet with just one click.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
-      },
-      {
-        paragraph:
-          "However, make sure that only you have access to the email registered in the wallet as it will be the focal point.",
+          "The devices are usually used alongside an online portal or client software installed on a desktop.",
       },
     ],
     type: "feature",
@@ -58,21 +42,7 @@ export const features = [
     text: [
       {
         paragraph:
-          "Wallets that have this feature provide to the user a way to login and signUp through their email",
-      },
-      {
-        paragraph:
-          "With this feature you access your wallet with just one click.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
-      },
-      {
-        paragraph:
-          "However, make sure that only you have access to the email registered in the wallet as it will be the focal point.",
+          "Wallets that have this feature provide to the user and token holders a way to profit off their digital assets.",
       },
     ],
     type: "feature",
@@ -84,21 +54,7 @@ export const features = [
     text: [
       {
         paragraph:
-          "Wallets that have this feature provide to the user a way to login and signUp through their email",
-      },
-      {
-        paragraph:
-          "With this feature you access your wallet with just one click.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
-      },
-      {
-        paragraph: "Making your login process much easier and smoother.",
-      },
-      {
-        paragraph:
-          "However, make sure that only you have access to the email registered in the wallet as it will be the focal point.",
+          "When using wallets that have this feature, the user will be able to display their nfts using the wallet provider platform",
       },
     ],
     type: "feature",
