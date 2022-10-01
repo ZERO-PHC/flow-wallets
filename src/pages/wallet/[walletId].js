@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // next router
 import { useRouter } from "next/router";
-import { Image } from '@chakra-ui/react'
+import { Image, Text } from '@chakra-ui/react'
 import { wallets } from "../../data/wallets";
 import { Avatar, Container, Flex, Heading } from "@chakra-ui/react";
 import WalletPlatformsIcons from "../../components/WalletPlatformsIcons";
@@ -27,8 +27,15 @@ export default function WalletView() {
 
 
   const Lorem = ({ text }) => {
-    // return a long string of -container
-    return <p>{text[0].paragraph}</p>;
+    return( 
+      <Flex maxW={"1000px"} flexDir="column">
+        {text.map((paragraph, index) => (
+          <Text key={index}  mb="1rem" lineHeight="1.5" fontSize={{sm: ".8rem", md: "1rem" ,lg:"1.2rem"}}>
+            {paragraph.paragraph}
+          </Text>
+        ))}
+      </Flex>
+    )
   };
 
   if (!Wallet) {
@@ -52,13 +59,7 @@ export default function WalletView() {
             </Flex>
             <WalletPlatformsIcons platforms={Wallet.platforms} size={25} />
           </Flex>
-          {/* height */}
           <Flex>
-            {/* <Image
-              src={`/wallets/${Wallet.urlBig}`}
-              objectFit='cover'
-              alt="illustration"
-            /> */}
             <Model path={Wallet.path} posterPath={Wallet.urlBig} wallet={Wallet} />
           </Flex>
         </Container>
