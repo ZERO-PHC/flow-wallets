@@ -60,7 +60,7 @@ export default function WalletView() {
             <WalletPlatformsIcons platforms={Wallet.platforms} size={25} />
           </Flex>
           <Flex>
-            <Model path={Wallet.path} posterPath={Wallet.urlBig} wallet={Wallet} />
+            <Model path={Wallet.path} wallet={Wallet} />
           </Flex>
         </Container>
         <WalletsBulletsRank specs={Wallet.specs} />
