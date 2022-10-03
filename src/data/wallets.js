@@ -146,10 +146,10 @@ export const wallets = [
     nonCustodial: true,
     similarWallets: ["ledger", "blocto"],
     specs: {
-      crypto: "Medium",
+      crypto: "High",
       security: "High",
       anonymity: "High",
-      swap: "Medium",
+      swap: "High",
       usability: "High",
     },
     platforms: ["web", "chrome"],
