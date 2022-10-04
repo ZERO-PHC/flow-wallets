@@ -20,6 +20,19 @@ export const features = [
     type: "feature",
   },
   {
+    id: "buy-crypto",
+    name: "Buy Crypto",
+    text: [
+      {
+        paragraph:
+          "Wallets that have this feature come with the ability to buy crypto directly from the wallet with a credit or debit card.",
+      },
+     
+    ],
+    selected: false,
+    type: "feature",
+  },
+  {
     id: "hardware-support",
     name: "Hardware Support",
     selected: false,

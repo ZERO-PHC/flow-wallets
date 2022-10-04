@@ -25,7 +25,7 @@ export const wallets = [
     linearBg: "linear-gradient(180deg, rgba(132, 34, 224, 0.56) -93.6%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://meetdapper.com/",
     features: [
-      "fiat-token",
+      "buy-crypto",
       "email-auth",
       "nft-support"
     ]
