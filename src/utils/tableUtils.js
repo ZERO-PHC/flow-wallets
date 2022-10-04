@@ -38,9 +38,10 @@ const getWallets = (walletPref, tab, isPref) => {
 
 const  getFeatWallets = (wallets, SelectedFeatures) => {
   return wallets.filter((wallet) => {
-    return wallet.features.some((feature) =>
-      SelectedFeatures.includes(feature)
-    );
+    return SelectedFeatures.every((feature) => wallet.features.includes(feature));
+    // return wallet.features.some((feature) =>
+    //   SelectedFeatures.includes(feature)
+    // );
   });
 }
 
