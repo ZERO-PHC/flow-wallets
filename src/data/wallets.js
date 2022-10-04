@@ -183,7 +183,7 @@ export const wallets = [
 
     selected: false,
     type: "wallet",
-    categories:["all"],
+    categories:["all", "security"],
     custodial: true,
     similarWallets: ["dapper", "blocto"],
     specs: {

@@ -60,6 +60,7 @@ export const features = [
     ],
     type: "feature",
   },
+  
   {
     id: "nft-support",
     name: "NFT Support",
