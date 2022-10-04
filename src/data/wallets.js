@@ -25,7 +25,6 @@ export const wallets = [
     linearBg: "linear-gradient(180deg, rgba(132, 34, 224, 0.56) -93.6%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://meetdapper.com/",
     features: [
-      "buy-crypto",
       "email-auth",
       "nft-support"
     ]
@@ -64,7 +63,7 @@ export const wallets = [
     website: "https://lilico.app/",
     features: [
       "email-auth",
-      "nft-support"
+      "nft-support",
     ]
   },
   {
@@ -102,6 +101,7 @@ export const wallets = [
       features: [
         "email-auth",
         "staking",
+        "buy-crypto",
         "nft-support"
       ]
     },
@@ -172,6 +172,7 @@ export const wallets = [
     website: "https://nu.fi/",
     features: [
       "email-auth",
+      "buy-crypto",
       "staking",
       "nft-support"
     ]
@@ -203,7 +204,7 @@ export const wallets = [
     linearBg: "linear-gradient(180deg, #32C7A1 -82.81%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://www.finoa.io/custody/",
     features: [
-      
+      "buy-crypto",
     ]
   },
 ];
