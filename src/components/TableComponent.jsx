@@ -23,18 +23,30 @@ export default function TableComponent() {
           boxShadow={0}
           justifyContent="flex-start"
         >
-          {Wallets.map((wallet, i) => (
-            <WalletComponent
-              key={i}
-              wallet={wallet}
-              handleAction={handleAction}
-            />
-          ))}
+          {Wallets.length > 0 ? (
+            Wallets.map((wallet, i) => (
+              <WalletComponent
+                key={i}
+                wallet={wallet}
+                handleAction={handleAction}
+              />
+            ))
+          ) : (
+            <Container
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="bold"
+              color="white"
+              justifyContent={"center"}
+              alignItems={"center"}
+              height="6rem"
+            >
+              No Wallets Found
+            </Container>
+          )}
         </Container>
       </Container>
-      <Container
-        variant="tableFeatures"
-      >
+      <Container variant="tableFeatures">
         <Heading
           fontSize={"18px"}
           pb={3}
@@ -45,7 +57,10 @@ export default function TableComponent() {
         >
           FEATURES
         </Heading>
-        <Flex flexDir={{sm: "row" ,md: "row" ,lg: "column"}} justifyContent="center">
+        <Flex
+          flexDir={{ sm: "row", md: "row", lg: "column" }}
+          justifyContent="center"
+        >
           {Features.map((feature, i) => (
             <FeatureComponent
               key={i}
