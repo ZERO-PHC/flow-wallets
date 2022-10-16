@@ -9,18 +9,19 @@ export default function HeroSection() {
   return (
     <main style={{ position: "relative", width: "100%" }}>
       <Container
-        h={{sm: "50vh", md: "70vh" ,lg: "80vh"}}
+        h={{sm: "42vh", md: "70vh" ,lg: "80vh"}}
         variant="heroBg"
         alignItems="center"
         justifyContent="center"
         flexDir="column"
         borderRadius="0"
+        mt={{sm: "3rem"}}
       >
         <Heading fontSize={{sm: "2.3rem", md: "3.5rem", lg: "4.5rem"}}>
           Find your <chakra.span color="green.100">Flow</chakra.span> Wallet
         </Heading>
         <Image
-          src="/walletsFlow.png"
+          src="/walletsFlow2.png"
           alt="Wallets Flow Blockchain"
           objectFit='cover'
         />

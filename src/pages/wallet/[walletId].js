@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // next router
 import { useRouter } from "next/router";
-import { Image, Text } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 import { wallets } from "../../data/wallets";
 import { Avatar, Container, Flex, Heading } from "@chakra-ui/react";
 import WalletPlatformsIcons from "../../components/WalletPlatformsIcons";
@@ -10,6 +10,7 @@ import WalletsBulletsRank from "../../sections/WalletsBulletsRank";
 import SimilarWalletsSection from "../../sections/SimilarWalletsSection";
 import WalletPageFooter from "../../components/WalletPageFooter";
 import dynamic from 'next/dynamic'
+import Footer from "../../components/Footer";
 
 const Model = dynamic(() => import('../../components/3dWalletWrapper'), {ssr: false})
 
@@ -72,7 +73,7 @@ export default function WalletView() {
         </Flex>
         <WalletPageFooter website={Wallet.website}/>
       </Container>
-      
+      <Footer />
     </Wrapper>
   );
 }

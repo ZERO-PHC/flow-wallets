@@ -207,4 +207,32 @@ export const wallets = [
       "buy-crypto",
     ]
   },
+  {
+    id: 'flipper',
+    name: "Flipper",
+    path:"/wallet_flipper.glb",
+    comingSoon: true,
+    selected: false,
+    type: "wallet",
+    categories:["all"],
+    nonCustodial: true,
+    similarWallets: [],
+    specs: {
+      crypto: "-",
+      security: "-",
+      anonymity: "-",
+      swap: "-",
+      usability: "-",
+    },
+    platforms: ["web", "chrome"],
+    text:[
+      { paragraph: "We are collecting the information from this wallet and will be available soon!"}
+    ],
+    url: "flipperWallet.png",
+    logo: "logo/flipper.png",
+    linearBg: "linear-gradient(180deg, #32C7A1 -82.81%, rgba(173, 181, 184, 0) 103.6%);",
+    website: "https://flipper.org/",
+    features: [
+    ]
+  },
 ];
