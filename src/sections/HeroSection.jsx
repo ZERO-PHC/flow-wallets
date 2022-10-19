@@ -28,15 +28,13 @@ export default function HeroSection() {
       </Container>
       <Flex position={"relative"} top={-38}  p="0 15%" gap={5} maxW="1200px" margin="auto">
         <OverviewCard
-          title="Are you a new Flow User?"
+          title="Get started"
           subtitle="Here is an overview to get you started."
           btnText="Flow User"
         />
-        {/* <OverviewCard
-          title="Are you a new Flow Developer?"
-          subtitle="Here is an overview to get you started."
-          btnText="Flow Developer"
-        /> */}
+        <OverviewCard
+          title="Learn more about wallets"
+        />
       </Flex>
     </main>
   );
