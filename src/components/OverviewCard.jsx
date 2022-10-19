@@ -23,20 +23,21 @@ export default function OverviewCard({ title, subtitle, btnText }) {
     <Container
       flexDir="row"
       alignItems="center"
+      justifyContent="space-between"
       variant="overview"
       textAlign={'left'}
       fontSize={"1.2rem"}
-      p={{ sm: "10px", md: "1rem 0.5rem", lg: "1rem 0.4rem" }}
+      p={{ sm: "10px 15px", md: "1rem 2rem", lg: "1rem 2rem" }}
       w="40%"
+      minH={"6rem"}
       _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
       onClick={title == "Get started" ? () => scrollToPreferences() :  () => handleAction("guide", "_", router, setOpenSearch, "_", "_", "what-is-a-wallet")}
     >
-      <Text>{title}</Text>
-      <Box w="10%" />
+      <Text fontSize={{sm: ".7rem", md: "1rem", lg: "1.2rem"}} >{title}</Text>
       {title === "Get started" ? (
         <svg
-          width="2rem"
-          height="2rem"
+          width="1.7rem"
+          height="1.7rem"
           viewBox="0 0 50 50"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
