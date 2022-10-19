@@ -13,7 +13,7 @@ export default function OverviewCard({ title, subtitle, btnText }) {
   function scrollToPreferences() {
   // scroll down 100% of the window height
   window.scrollTo({
-    top: window.innerHeight,
+    top: window.innerHeight - 110,
     behavior: "smooth",
   });
 
@@ -24,8 +24,10 @@ export default function OverviewCard({ title, subtitle, btnText }) {
       flexDir="row"
       alignItems="center"
       variant="overview"
-      p={{ sm: "10px", md: "10px 20px", lg: "15px 30px" }}
-      w="auto"
+      textAlign={'left'}
+      fontSize={"1.2rem"}
+      p={{ sm: "10px", md: "1rem 0.5rem", lg: "1rem 0.4rem" }}
+      w="40%"
       _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
       onClick={title == "Get started" ? () => scrollToPreferences() :  () => handleAction("guide", "_", router, setOpenSearch, "_", "_", "what-is-a-wallet")}
     >
