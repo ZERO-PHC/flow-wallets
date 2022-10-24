@@ -12,8 +12,12 @@ export default function OverviewCard({ title, subtitle, btnText }) {
 
   function scrollToPreferences() {
   // scroll down 100% of the window height
+  const isMobile = window.innerWidth < 768;
+  const scrollValue = isMobile ? window.innerHeight /2  : window.innerHeight - 110;
+
+
   window.scrollTo({
-    top: window.innerHeight - 110,
+    top: scrollValue,
     behavior: "smooth",
   });
 

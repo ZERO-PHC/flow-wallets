@@ -1,0 +1,558 @@
+[33mcommit 11e5460859accfbf8e715c470fa300f9d6083d19[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ZERO-PHC <zero@cyphers.gg>
+Date:   Wed Oct 19 15:43:27 2022 -0500
+
+    adjustments
+
+[33mcommit 7518223e768a0e9a37943ac4c42cd586bbfe1157[m
+Author: ZERO-PHC <zero@cyphers.gg>
+Date:   Wed Oct 19 13:54:51 2022 -0500
+
+    added get started
+
+[33mcommit 70fbb46d95ac42811770363e3a9e853ebce20679[m
+Author: ZERO-PHC <zero@cyphers.gg>
+Date:   Wed Oct 19 13:51:17 2022 -0500
+
+    added get started
+
+[33mcommit 764e82fb86a5c6b97d7a6c980878cd5669af9f1e[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Oct 15 22:01:45 2022 -0300
+
+    update style on footer
+
+[33mcommit fa8bbe7b2577b161dcb4e421359ef7f2e4f54a92[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Oct 15 21:53:44 2022 -0300
+
+    changing onclick rule on hero home page
+
+[33mcommit 2760ba9d3656c1de2bc475d8e06e82beb0579f28[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Oct 15 21:47:28 2022 -0300
+
+    updates on flipper wallet and footer
+
+[33mcommit 41e8a807fc2b2e24c0c359e9f2d4450dc105e9c1[m
+Author: ZERO-PHC <zero@cyphers.gg>
+Date:   Fri Oct 7 16:16:44 2022 -0500
+
+    added no wallets found msg
+
+[33mcommit 1fbb8e4cecf7149800783b9a25667a4ae2404ca9[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Tue Oct 4 15:35:33 2022 -0300
+
+    updates on wallets features
+
+[33mcommit fcf385dc9e911ea3ec4817d90d819b51d09cc313[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Oct 4 12:20:24 2022 -0500
+
+    added finoa to security
+
+[33mcommit 55362878e97a7e804565571bfe5e8b870eb3df70[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Oct 4 12:06:19 2022 -0500
+
+    added buy-crypto feature
+
+[33mcommit 0166b4954a881583f1c303277ee739a101e36493[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Oct 4 11:56:36 2022 -0500
+
+    enhanced filtering
+
+[33mcommit 7e9b36c2f897cb399b72d156fc751cbbf1f9b347[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Mon Oct 3 14:19:41 2022 -0300
+
+    change crypto from nufi to high
+
+[33mcommit 4e910046bbae35a3b50219c0c3beb26241843c98[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Mon Oct 3 14:06:28 2022 -0300
+
+    add nufi wallet
+
+[33mcommit a9f776a46381c503270d1219e65f33c8d8795c55[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Oct 1 19:39:41 2022 -0300
+
+    updates on features texts
+
+[33mcommit 660306fc6edf42b25b88e3e2553e40bc520c91dd[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Oct 1 19:12:01 2022 -0300
+
+    remove wallet nufi
+
+[33mcommit a40515819177f4c628567405d160e12c3afbc84b[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Oct 1 19:11:14 2022 -0300
+
+    style updates
+
+[33mcommit 8faae30895d2414ae6a7aa04013e0c1b7b82dae0[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Oct 1 18:10:48 2022 -0300
+
+    updates on wallets
+
+[33mcommit 2df331d7ff2c237d3492e59e5fd5d22adc9566ba[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Wed Sep 28 18:29:45 2022 -0300
+
+    fix favicon image
+
+[33mcommit 58f0bbbc9ba8d3f0fc8b8614fb325ba48150e596[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Wed Sep 28 18:20:06 2022 -0300
+
+    change on favicon
+
+[33mcommit ddad907b7d284347f8c968fd55f1b6557010b2a8[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Sep 28 14:08:32 2022 -0500
+
+    favicon v2
+
+[33mcommit 447d0a0480c4e5f216b7c7d3039af6a77d76fcff[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Sep 28 13:53:58 2022 -0500
+
+    added favicon
+
+[33mcommit 0ee7fb5ce49bdc92b729e0a8fc4f6095d4b46bb2[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Sep 28 13:49:35 2022 -0500
+
+    anonymity titles
+
+[33mcommit 69bd51c384767eba2abce7c0659e9900c65bbae6[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Sep 28 13:37:47 2022 -0500
+
+    finished 3 feedback points
+
+[33mcommit 48680b91a79c59f40f97ea82ea0112088fac2229[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Wed Sep 14 01:03:09 2022 -0300
+
+    fix specs names
+
+[33mcommit a9e7f41b918b74877fe87916bf0bb6b34ce04054[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Wed Sep 14 00:43:39 2022 -0300
+
+    update wallets
+
+[33mcommit f23e062329be879a8abc136d104739d9e8502dff[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Wed Sep 14 00:39:51 2022 -0300
+
+    update
+
+[33mcommit e2a8faca2c7981d7441cd82b49bf048c46fe35d0[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sat Sep 10 14:26:09 2022 -0500
+
+    fixed wallets table
+
+[33mcommit afbc6720079fe7723bb137131646ce2aa0a417e5[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sat Sep 10 11:02:57 2022 -0500
+
+    refactored wallet route, implemented loader
+
+[33mcommit a87b89d24a4533c8fc45931ec1fa739b8cdf7550[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Sep 10 11:53:06 2022 -0300
+
+    fix wallets size
+
+[33mcommit cfab371216a6b0cfae7aa6758b7c959d2d8d0d0f[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Sep 10 11:38:14 2022 -0300
+
+    add loading bar to 3d model
+
+[33mcommit 7a7b8dae3763a0532e6c9db6ea1bd253f14ed8f0[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Sep 10 11:33:30 2022 -0300
+
+    updates wallets loading
+
+[33mcommit 18936508ecd7dc4e5db2204400c1d259fc85b2f4[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Sep 9 22:51:04 2022 -0300
+
+    finoa wallet
+
+[33mcommit f073808e94378fd068c05c2b8c855890f4dfd83d[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Sep 9 22:34:50 2022 -0300
+
+    fix image height and add a head to the project
+
+[33mcommit 16c66d5d8b8969df88157712377d72d84e358aa8[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Sep 9 22:13:10 2022 -0300
+
+    fix 3d models
+
+[33mcommit 74bf490160e4b4e250a167a7e3af007099ac9572[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Sep 9 16:16:05 2022 -0500
+
+    added 3d wallets
+
+[33mcommit 0bcfb8542b8cc7a00dc46a91993a99935abaae09[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Sep 2 12:38:35 2022 -0500
+
+    optimized path for SEO
+
+[33mcommit 7d69cfc49183c7bfd5b35c3a167cd3a1f7de49c0[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 31 12:57:24 2022 -0500
+
+    added link
+
+[33mcommit 33b40109e80e17157d9f7b96bc9bddb7f851007e[m
+Merge: 184df0e 46c6863
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 31 12:36:41 2022 -0500
+
+    wdkow
+
+[33mcommit 184df0e8393f12434e3c3d5ad2b5ba22ca861d20[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 31 12:31:53 2022 -0500
+
+    wd
+
+[33mcommit 072a3190c2a204ef1a72571e8cd5c77343f65fef[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 31 12:25:20 2022 -0500
+
+    added lin to form
+
+[33mcommit 46c6863a681c57ac8d5828ab954179cbbbd1be55[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Aug 26 11:25:05 2022 -0300
+
+    updates responsive styles
+
+[33mcommit 39eb040909a5253691d33ab9a4cfbb8288621455[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Thu Aug 25 16:55:50 2022 -0300
+
+    responsive updates
+
+[33mcommit 5160598333455f30bad54a04271de73770a35cb6[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Wed Aug 24 18:04:27 2022 -0300
+
+    updates responsiveness
+
+[33mcommit cde41b0c09c83b81c5c4b459bd9d2e860e1e40c4[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Tue Aug 23 23:14:34 2022 -0300
+
+    responsive updates
+
+[33mcommit 8e14351be608c787e49e843addeab5eaf672eaac[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 23 13:04:14 2022 -0500
+
+    guides added to the search engine
+
+[33mcommit 5a8abfbcb78d79d6354ab6300263d95eee7eab80[m
+Merge: 2e29bc9 25a1c55
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 23 10:28:25 2022 -0500
+
+    update main locally
+
+[33mcommit 2e29bc9da0e6a45527d3d20e91985929ef3b650a[m[33m ([m[1;31morigin/zero[m[33m)[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 23 10:08:57 2022 -0500
+
+    moved search engine  to app
+
+[33mcommit a18e29c126f18d55939f421bbabc56de7c06419b[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 23 09:59:35 2022 -0500
+
+    c2
+
+[33mcommit dbb880c6339365fb57297ba894dfa1e0e5df8811[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 23 09:54:34 2022 -0500
+
+    added guides to the search engine
+
+[33mcommit 25a1c551c41abf18449f491555519a2e0a6c5a9f[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Mon Aug 22 23:37:11 2022 -0300
+
+    search tests
+
+[33mcommit 727b7338a2c6f21ced08b2220cdc3621430eed49[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Mon Aug 22 23:09:41 2022 -0300
+
+    search comp
+
+[33mcommit 2c47fc5a3ceeb509893d6a2e8aafacd1758f6b2a[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sun Aug 21 21:18:10 2022 -0300
+
+    new modal
+
+[33mcommit 33ec846a92d13361a6167c373e9452f61b0ee5ae[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sun Aug 21 19:27:04 2022 -0300
+
+    hero updates
+
+[33mcommit 06e63b297331add5d7c941bae1a50373d29b039a[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sun Aug 21 15:43:15 2022 -0500
+
+    svg logo
+
+[33mcommit a9ec18f45cea76b42b51661831d150b65011e9de[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sun Aug 21 14:55:31 2022 -0500
+
+    set open search pref card
+
+[33mcommit 651083b6b9aaacda3fc2172051296fa4ec950908[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sun Aug 21 14:52:29 2022 -0500
+
+    refactored general utils
+
+[33mcommit 5bd9f41c1e7aad49de101ad2ca8832023c37103f[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sun Aug 21 14:45:39 2022 -0500
+
+    fixed build deployment and hero cards
+
+[33mcommit ed38dfa5653a04ccda3d3c2e0814ac44987c86c5[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sun Aug 21 13:44:19 2022 -0500
+
+    updated styles
+
+[33mcommit ec575f2920961f6c487a6e5c711305a8740619b3[m
+Merge: 434adae 98d63e9
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sun Aug 21 13:35:56 2022 -0500
+
+    resolved conflict
+
+[33mcommit 98d63e9fdb3e8b46cd8e826305803193de704626[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sun Aug 21 13:35:05 2022 -0500
+
+    to main
+
+[33mcommit da8f4a05d45afb61ec4c67c0eac0e518fb687dbb[m[33m ([m[1;31morigin/newStyles[m[33m)[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sun Aug 21 12:22:29 2022 -0300
+
+    updates sunday
+
+[33mcommit 434adaef29d6337ae7292574323af4e982855e03[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sat Aug 20 22:04:02 2022 -0500
+
+    c
+
+[33mcommit 8d72d49dba64ab7af0d6113aff6b4cdfd74d9bdb[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Sat Aug 20 20:38:14 2022 -0300
+
+    new Styles
+
+[33mcommit 4c1fa2ca9ad035302bf27f40aab86e1aa7fae553[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Aug 19 23:56:08 2022 -0300
+
+    style updates
+
+[33mcommit 2d47d12b663a027a5bca073a56e89b3a712bae1f[m
+Merge: 2cbb066 0331940
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Aug 19 21:12:34 2022 -0500
+
+    merged styles home
+
+[33mcommit 033194006e248cdd44195066cdc862e96f3d0d3d[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Aug 19 20:05:46 2022 -0500
+
+    wd
+
+[33mcommit 0bd8283cd286a31fadc54b9a31bfdf6b3d8ea6b2[m
+Merge: 43f6c6a c99c3d6
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Aug 19 20:04:40 2022 -0500
+
+    c
+
+[33mcommit 43f6c6a1557f8be6a3bf87f4b56bb5d96ceee613[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Aug 19 20:03:16 2022 -0500
+
+    changes before sandbox merge
+
+[33mcommit c99c3d6fafa10f935230bd191f04b87a0524e76c[m[33m ([m[1;31morigin/styledMerged[m[33m)[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Aug 19 21:57:07 2022 -0300
+
+    styledMerged
+
+[33mcommit cbfb9c24b590c7c62ae0ac984c9484011211f719[m
+Merge: 24163f6 02c2c2b
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Aug 19 18:33:25 2022 -0300
+
+    styledMerged
+
+[33mcommit 2cbb066f16586492a1d63827237081876076e3dc[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Aug 19 13:05:00 2022 -0500
+
+    pref nav
+
+[33mcommit fe44d121527be3d67f066aae88d79580a74170c5[m
+Merge: 02c2c2b 24163f6
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Fri Aug 19 12:52:06 2022 -0500
+
+    recover scroll pos, search bar selection
+
+[33mcommit 24163f694008e3dcaa0ddaecd5e01f8eb05fd304[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Aug 19 11:27:39 2022 -0300
+
+    merge changes
+
+[33mcommit 29cc8e77b352e86b94676c71c47dd67e6bc6e42d[m
+Author: FelipeRibeiroLabs <frlabsmd@gmail.com>
+Date:   Fri Aug 19 11:18:40 2022 -0300
+
+    first commit styles branch
+
+[33mcommit 02c2c2bc8ef77742723bc2a25d44f61f45386892[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Thu Aug 18 15:45:10 2022 -0500
+
+    cleaned t provider
+
+[33mcommit e6fd815e4d9140a884f026fac152fdfd73a17462[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Thu Aug 18 15:20:03 2022 -0500
+
+    abstracted logic to utils
+
+[33mcommit b8e97a5785ff1409ff375899ea1beeec1595649e[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Thu Aug 18 14:09:11 2022 -0500
+
+    abstracted table provider
+
+[33mcommit 5383d0682e30402ca4610ae23bcd847c414963dd[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 20:55:56 2022 -0500
+
+    wallet specs fixed and improved home styles
+
+[33mcommit 615a3219bb70c5f0d1bf7d19012d986cffd724e4[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 20:41:01 2022 -0500
+
+    fixed search engine- names bug
+
+[33mcommit 9af7ed54c4e908125282a3f3eaa94d0aec21276c[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 20:21:59 2022 -0500
+
+    fixed wallet pref btn
+
+[33mcommit 58514c3a89a6ba821370bbea485dee649ecd5a6d[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 20:17:26 2022 -0500
+
+    implemented table provider
+
+[33mcommit 331814b74f2d59d4c3f1e17447d39950b8180a03[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 19:43:43 2022 -0500
+
+    table engine works
+
+[33mcommit 987ec8f02236391ce4b5e13ea05422ce1c4db7f6[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 18:52:16 2022 -0500
+
+    feat: deselect custodia l
+
+[33mcommit 825221f62334e373bff81c27768fd13cf3925d53[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 18:33:17 2022 -0500
+
+    ease tab works
+
+[33mcommit f570824763ef9e98c77fd58d075d693ed62b60cf[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Wed Aug 17 18:13:24 2022 -0500
+
+    func 90%
+
+[33mcommit a1d36da3951b2036844fd9d94f2bcae6b41312c0[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 16 14:45:01 2022 -0500
+
+    wallet details foundation
+
+[33mcommit 9d78480cc5111c02508952debd48d4c24b20ebf9[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 16 09:39:36 2022 -0500
+
+    state management
+
+[33mcommit 6a8b7d16beedddaf48175d5dfb27f7291e324d63[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 16 08:45:29 2022 -0500
+
+    wallet pref state
+
+[33mcommit 5dc925a6f79c595df4ccedfa49cca6f3e79bd39c[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Tue Aug 16 08:08:24 2022 -0500
+
+    foundation 100%
+
+[33mcommit f126229bc741b9fa2a3270bd2fb2ed3fc9ff77d1[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Mon Aug 15 14:12:08 2022 -0500
+
+    jump
+
+[33mcommit 434eb1eaebe59559c1548943d4deff22af595d29[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sat Aug 13 13:50:35 2022 -0500
+
+    c3
+
+[33mcommit a97bb7e2045849dca223c0030cba137f9e2ef96a[m
+Author: Alan Dega <zero@cyphers.gg>
+Date:   Sat Aug 13 08:33:11 2022 -0500
+
+    Initial commit from Create Next App
