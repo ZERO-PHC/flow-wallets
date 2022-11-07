@@ -30,6 +30,8 @@ function MyApp({ Component, pageProps }) {
             <Head>
               <title>Flow Wallets - Find your wallet</title>
               <meta property="og:title" content="Flow Wallets - Find your wallet" key="title" />
+              <meta content="Find best wallet on Flow Blockchain" name="description" />
+              <meta content="Find best wallet on Flow Blockchain" property="og:description" />
             </Head>
             <SearchDialogComponent />
             <Component {...pageProps} />

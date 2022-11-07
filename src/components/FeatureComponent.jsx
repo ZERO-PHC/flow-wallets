@@ -28,6 +28,7 @@ export const FeatureComponent = ({
         p={{ sm: "8px", md: "12px", lg: "15px" }}
       >
         <Checkbox
+          aria-label="Select feature"
           isChecked={SelectedFeatures.includes(feature.id)}
           onChange={() => handleFeatureSelection(feature.id)}
           size={{ sm: "md", md: "lg", lg: "lg" }}

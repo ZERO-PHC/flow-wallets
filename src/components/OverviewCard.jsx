@@ -1,4 +1,4 @@
-import { Container, Text, Button, Spacer, Box, useColorMode } from "@chakra-ui/react";
+import { Container, Text, useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
 import { useDialog } from "../providers/DialogProvider";
