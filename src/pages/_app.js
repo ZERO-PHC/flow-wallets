@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { ColorModeScript } from "@chakra-ui/react";
 import React,{ useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 import Layout from "../components/Layout";
 import theme from "../theme";
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <SearchDialogComponent />
             <Component {...pageProps} />
+            <Analytics />
           </Layout>
         </TableProvider>
       </DialogProvider>
