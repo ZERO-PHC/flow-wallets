@@ -142,7 +142,7 @@ export const wallets = [
     name: "NuFi",
     selected: false,
     type: "wallet",
-    categories:[ "security", "anon", "all"],
+    categories:[ "security", "anon", "ease", "all"],
     nonCustodial: true,
     similarWallets: ["ledger", "blocto", "dapper"],
     specs: {
