@@ -6,7 +6,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "ease","all", "security"],
     custodial: true,
-    similarWallets: ["blocto", "finoa", "lilico"],
+    similarWallets: ["blocto", "nufi", "lilico"],
     specs: {
       crypto: "Medium",
       security: "High",
@@ -115,7 +115,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "security","all"],
     nonCustodial: true,
-    similarWallets: ["lilico"],
+    similarWallets: ["nufi"],
     specs: {
       crypto: "Low",
       security: "High",
@@ -144,7 +144,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "security", "anon", "all"],
     nonCustodial: true,
-    similarWallets: ["ledger", "blocto"],
+    similarWallets: ["ledger", "blocto", "dapper"],
     specs: {
       crypto: "High",
       security: "High",
@@ -174,6 +174,7 @@ export const wallets = [
       "email-auth",
       "buy-crypto",
       "staking",
+      "hardware-support",
       "nft-support"
     ]
   },
