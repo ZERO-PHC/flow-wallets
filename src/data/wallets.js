@@ -132,7 +132,8 @@ export const wallets = [
     linearBg: "linear-gradient(180deg, #F8F3EF -82.81%, rgba(173, 181, 184, 0) 103.6%);",
     website: "https://ledger.com/",
     features: [
-      "hardware-support"
+      "hardware-support",
+      "staking",
     ]
   },
   {
