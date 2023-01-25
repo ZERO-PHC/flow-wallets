@@ -6,6 +6,7 @@ export const wallets = [
     type: "wallet",
     categories:[ "ease","all", "security"],
     custodial: true,
+    nonCustodial: true,
     similarWallets: ["blocto", "nufi", "lilico"],
     specs: {
       crypto: "Medium",
